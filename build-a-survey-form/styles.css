@@ -1,60 +1,50 @@
-header{
-	background-color: #FFC300;
-	font-size: 36px;
-	text-align: center;
-	border-radius: 10px;
+html {
+	background-image: url("https://assets.pokemon.com/static2/_ui/img/chrome/body_bg.png");
 }
-body, #survey-form{
-	background-color: #FFD452;
-}
-footer{
-	text-align: center;
-}
-
-#div1{	
-	background-color: #FFC000;
+header {
 	flex-direction: row;
 	display: flex;
-	border-radius: 10px;
+	background-image: url("https://assets.pokemon.com/static2/_ui/img/gus/promo-bg.png");
+	padding-left: 37%;
 }
-#div2{
-	background-color: #FFC000;
-	margin-top: 10px;
-	padding: 10px;
-	padding-left: 23%;
-	border-radius: 10px;
+footer {
+	text-align: center;
+	margin-top: 30px;
 }
-#div3{
-	background-color: #FFC000;
-	margin-top: 10px;
-	padding: 10px;
-	padding-left: 23%;
-	padding-right: 23%;
-	flex-direction: column;
-	display: flex;
-	border-radius: 10px;
-}
-#Lista1{
+#title {
 	order: 1;
-	margin-left: 20%;
+	font-size: 42px;
 }
-
-#pokeball{
-	height: 200px;
-	width: 200px;
+#tittle-ball1 {
+	order: 0;
+	width: 100px;
+	height: 100px;
+}
+#tittle-ball2 {
 	order: 2;
+	width: 100px;
+	height: 100px;
 }
-select.icon-menu option{
-	background-repeat: no-repeat;
-	background-position: bottom left;
-	padding-left: 30px;
+#description {
+	background-color: blue;
+	border-radius: 3px;
+	text-align: center;
+	padding-top: 5px;
+	padding-left: -32%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-right: 32%;
+	margin-bottom: 20px;
+	margin-left: 32%;
 }
-select#dropdown option[value="bulbasaur"]{
-	background-color: #2EFF00;
-}
-select#dropdown option[value="charmander"]{
-	background-color: #FF0000;
-}
-select#dropdown option[value="squirtler"]{
-	background-color: #52F2FF;
+#survey-form{
+	background-image: url("https://assets.pokemon.com/static2/_ui/img/gus/promo-bg.png");
+	border-radius: 10px;
+	padding-top: 5px;
+	padding-left: -32%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-right: 32%;
+	margin-bottom: 20px;
+	margin-left: 32%;
 }
