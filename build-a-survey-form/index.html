@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="styles.css" />
+  <header>
+    <h1 id="title">Pokémon Online</h1>
+    <p id="description">Bienvenido al maravilloso mundo de <b>Pokémon Online</b>.</p>
+  </header>
+  <body>
+    <form id="survey-form">
+      <div id="div1">
+        <img id="pokeball"src="pokeball.png">
+        <ul id="Lista1">
+          <h2>Introduzca la siguiente información para comenzar a jugar:</h2>
+          <li><label id="name-label" for="name">Nombre de entrenador Pokémon:</label>
+           <input id="name" type="text" placeholder="Nombre" required>
+          </li>
+          <li><label id="email-label" for="email">Email:</label>
+           <input id="email" type="email" placeholder="Email" required>
+         </li>
+         <li><label id="number-label" for="number">¿Cuantas veces has jugado?</label>
+           <input id="number" type="number" min="0" max="150" placeholder="Número">
+          </li>
+          <li><label id="dropdown-label" for="dropdown">Elige tu pokemon inicial:</label>
+            <select id="dropdown" class="icon-menu" required>
+              <option disabled selected value>Selecciona una opción.</option>
+              <option value="bulbasaur">Bulbasaur</option>
+              <option value="charmander">Charmander</option>
+              <option value="squirtler">Squirtler</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+        <div id="div2">
+          <label for="form-dificultad">Seleccione su dificultad:</label>
+          <div id="form-dificultad" class="form-group">
+            <input id="facil" type="radio" name="difficulty" value="facil" class="input-radio"checked>
+            <label for="facil">Facil</label>
+            <input id="medio" type="radio" name="difficulty" value="medio"class="input-radio">
+            <label for="medio">Medio</label>
+            <input id="dificil "type="radio" name="difficulty" value="dificil"class="input-radio">
+            <label for="dificil">Difícil</label>
+          </div>
+          <label for="mapa">Selecciones los mapas a los que desearía jugar:</label>
+          <ul>
+            <li><label for="america">América</label>
+              <input id="america" type="checkbox" name="america" value="america" checked>
+            </li>
+            <li><label for="europa">Europa</label>
+              <input id="europa" type="checkbox" name="europa" value="europa">
+            </li>
+            <li><label for="asia">Asia</label>
+              <input id="asia" type="checkbox" name="asia" value="asia">
+            </li>
+          </ul>
+        </div>
+    <div id="div3">
+      <label for="coments">¿Como comienza tu aventura?</label>
+      <textarea id="coments" name="comment"></textarea>
+      <button id="submit" type="submit">Comenzar a jugar</button>
+    </div>
+    </form>
+  </body>
+  <footer><p>Página de pruebas, realizando el ejercicio 2 de HTML5&CSS3 "Build a Survey Form"</p>
+            <p>Samuel Fuentes Sánchez.</p>
+  </footer>
+</html>
