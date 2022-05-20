@@ -1,0 +1,102 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="styles.css">
+	<main id="main">
+  		<title id="title">La patata</title>
+  			<header>
+  				<h1>Solanum tuberosum</h1>
+  				<h2>La patata</h2>  
+  				<figure id="img-div">
+  					<div id="circulo">
+    					<img id="image" src="https://static.wikia.nocookie.net/hayday/images/2/29/Patata.png/revision/latest/scale-to-width-down/175?cb=20200823155022&path-prefix=es">
+    				</div>
+    				<figcaption id="img-caption">Fotografía de una patata real.</figcaption>
+    			</figure>
+    		</header>
+    		<body>
+    			<ul id="text-body">
+    				<li><h4><p id="tribute-info">El origen de la patata</p></h4>
+    					Solanum tuberosum, de nombre común papa o patata, es una especie herbácea perteneciente al género Solanum de la familia de las solanáceas, originaria de la región que comprende el altiplano sur del Perú. Fue domesticada en el altiplano andino y en las cercanías del lago Titicaca por los habitantes de esta región desde hace unos ocho mil años. En el siglo XVI comenzó a ser trasladada a Europa por los conquistadores españoles quienes la consideraban una curiosidad botánica y no una planta alimenticia. Su consumo fue creciendo, aunque al principio como planta forrajera y de jardín por sus flores; su uso gastronómico se expandió a todo el mundo desde el siglo XVIII gracias a los escritos agronómicos del francés Antoine Parmentier y del irlandés afincado en España Enrique Doyle, hasta convertirse en uno de los principales alimentos del ser humano.
+    				</li>
+    				<li><h4>CURIOSIDADES DE LOS ORÍGENES DE LA PATATA</h4>
+					Curiosamente, no sólo se encontraban cultivadas en los huertos o los campos, también en los jardines. Como hemos comentado, se introdujeron en los jardines italianos, pero también en el resto de Europa. Fue considerada durante mucho tiempo como una planta exótica que sólo cultivaban unos pocos botánicos y que no siempre era para consumo. Su planta frondosa y con bonitas flores hizo que fuese un elemento ornamental durante esta época.
+					<p>Fue ya a finales del siglo XVIII, en Francia, cuando el galo Antoine Parmentier, agrónomo y naturista, extendió por toda Europa la costumbre de usarla como alimento. Desde entonces, éste alimento tan presente en nuestra lista de la compra, tuvo una importancia cada vez mayor en nuestra base alimentaria. Como ya sabemos, a día de hoy constituye uno de los alimentos principales en nuestra dieta y en la de otros muchos países del mundo..
+					</p>
+					</li>
+    				<li><h4>DESCUBRIMIENTO DE LA PATATA</h4>
+					Como hemos visto, era cultivada desde hacía mucho tiempo por las poblaciones locales en sus países de origen, Chile y Perú. Los españoles la conocieron en su viaje a América y la trajeron a Europa. Pero tuvieron que pasar muchos años hasta que se reconociera su importancia alimenticia, a finales del siglo XVIII. Gracias principalmente a Luis XVI, se produjo el cultivo de la patata a gran escala.
+					<p>La patata es una planta de tallo herbáceo, con unos sesenta centímetros de altura. Tiene hojas ovaladas y de color blanquecino en su parte inferior. Al contrario de lo que se pueda pensar en un primero momento, lo que nosotros consumimos no es el fruto. La patata es el tallo subterráneo de la planta, que recibe el nombre de tubérculo, abultado y convertido en almacén de sustancias de reserva.
+					</p>
+					<p>Los incas conocían más de 60 variedades de patatas adecuadas a los distintos climas. De esta manera, se llegaron a cultivar tanto junto a desiertos costeros como a 4000 metros de altitud, en las zonas cercanas al lago Titicaca.
+					</p>
+					<p>Además de como hortaliza, la planta de la patata se utiliza también en la actualidad para la producción de almidón, harina de fécula, dextrina y alcohol.
+					</p>
+					</li>
+    				<li><h4>CURIOSIDADES DE LA PATATA</h4>
+					La patata sólo nace de otra patata. Para que haya más probabilidad de éxito en su cultivo, es adecuado que tengan algún grillo, no es necesario que tengan gran cantidad de ellos. Si no los tienen, es recomendable cortar la patata por la mitad. Pero que esto no nos condicione, si todavía no tiene grillos los echará cuando la plantemos. Es fundamental que la tierra disponga de un estado y nutrientes adecuados para que se pueda nutrir la planta. Se planta en la tierra, a unos ocho o diez centímetros de profundidad. Pasado un tiempo, de ella saldrá un brote que crece hacia arriba hasta sobresalir del terreno, dando origen a una pequeña planta.
+					<p>En la parte subterránea, el brote principal origina otros brotes que, a su vez, producen un grupo de nuevas patatas. Así sucesivamente, hasta conseguir una rica recolecta. La forma que puedan adoptar los tubérculos puede ser muy variada. Estos pueden ser redondos, ovalados o muy alargados. En su parte externa se pueden observar hoyuelos en los que despuntan pequeñas yemas. Por dentro, su pulpa puede encontrarse de color blanco o amarillo.
+					</p>
+					</li>
+    			</ul>
+    			<a id="tribute-link" href="" target="_blank"></a>
+    		</body>
+    		<footer><p>Página de pruebas, realizando el ejercicio 1 de HTML5&CSS3 "Build a Tribute Page</p>
+    				<p>Samuel Fuentes Sánchez.</p>
+    		</footer>
+	</main>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+img {
+  display: block;
+  width: 450px;
+  height: auto;
+  margin: auto auto;
+  max-width: 100%;
+}
+header{
+	background-color: #F9E5C3;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+}
+h4{
+	text-transform: uppercase;
+}
+footer{
+	margin-top: 50px;
+}
+#img-div{
+	background-color: #DDCDB2;
+	border-radius: 10px;
+	text-transform: none;
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+#circulo{
+	background-color: white;
+	border-radius: 100%;
+	width: 500px;
+	height: auto;
+}
+#main{
+	background-color: #FCF0DA;
+	text-align: center;
+	padding-bottom: 100px;
+}
+#text-body{
+	margin-left: 150px;
+	margin-right: 150px;
+	text-align: left;
+}
+
+** end of undefined **
+
