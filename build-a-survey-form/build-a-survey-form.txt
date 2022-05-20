@@ -1,136 +1,32 @@
 ** start of undefined **
 
-<!DOCTYPE html>
-<html>
-  <link rel="stylesheet" href="styles.css" />
-  <header>
-    <h1 id="title">Pokémon Online</h1>
-    <p id="description">Bienvenido al maravilloso mundo de <b>Pokémon Online</b>.</p>
-  </header>
-  <body>
-    <form id="survey-form">
-      <div id="div1">
-        <img id="pokeball"src="pokeball.png">
-        <ul id="Lista1">
-          <h2>Introduzca la siguiente información para comenzar a jugar:</h2>
-          <li><label id="name-label" for="name">Nombre de entrenador Pokémon:</label>
-           <input id="name" type="text" placeholder="Nombre" required>
-          </li>
-          <li><label id="email-label" for="email">Email:</label>
-           <input id="email" type="email" placeholder="Email" required>
-         </li>
-         <li><label id="number-label" for="number">¿Cuantas veces has jugado?</label>
-           <input id="number" type="number" min="0" max="150" placeholder="Número">
-          </li>
-          <li><label id="dropdown-label" for="dropdown">Elige tu pokemon inicial:</label>
-            <select id="dropdown" class="icon-menu" required>
-              <option disabled selected value>Selecciona una opción.</option>
-              <option value="bulbasaur">Bulbasaur</option>
-              <option value="charmander">Charmander</option>
-              <option value="squirtler">Squirtler</option>
-            </select>
-          </li>
-        </ul>
-      </div>
-        <div id="div2">
-          <label for="form-dificultad">Seleccione su dificultad:</label>
-          <div id="form-dificultad" class="form-group">
-            <input id="facil" type="radio" name="difficulty" value="facil" class="input-radio"checked>
-            <label for="facil">Facil</label>
-            <input id="medio" type="radio" name="difficulty" value="medio"class="input-radio">
-            <label for="medio">Medio</label>
-            <input id="dificil "type="radio" name="difficulty" value="dificil"class="input-radio">
-            <label for="dificil">Difícil</label>
-          </div>
-          <label for="mapa">Selecciones los mapas a los que desearía jugar:</label>
-          <ul>
-            <li><label for="america">América</label>
-              <input id="america" type="checkbox" name="america" value="america" checked>
-            </li>
-            <li><label for="europa">Europa</label>
-              <input id="europa" type="checkbox" name="europa" value="europa">
-            </li>
-            <li><label for="asia">Asia</label>
-              <input id="asia" type="checkbox" name="asia" value="asia">
-            </li>
-          </ul>
-        </div>
-    <div id="div3">
-      <label for="coments">¿Como comienza tu aventura?</label>
-      <textarea id="coments" name="comment"></textarea>
-      <button id="submit" type="submit">Comenzar a jugar</button>
-    </div>
-    </form>
-  </body>
-  <footer><p>Página de pruebas, realizando el ejercicio 2 de HTML5&CSS3 "Build a Survey Form"</p>
-            <p>Samuel Fuentes Sánchez.</p>
-  </footer>
-</html>
+<h1 id="title">título</h1>
+<p id="description">descripción</p>
+<form id="survey-form">
+  <label id="name-label" for="name">Nombre:</label>
+  <input id="name" type="text" placeholder="nombre" required>
+  <label id="email-label" for="email">Email:</label>
+  <input id="email" type="email" placeholder="email" required>
+  <label id="number-label" for="number">Numero:</label>
+  <input id="number" type="number" placeholder="número" min="0" max="100">
+  <select id="dropdown">
+    <option disable selected value>Seleccióne una opción</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+  </select>
+  <input type="radio" name="opciones" value="3">
+  <input type="radio" name="opciones" value="4">
+  <input type="checkbox" value="5">
+  <input type="checkbox" value="6">
+  <textarea></textarea>
+  <input id="submit" type="submit">
+</form>
 
 ** end of undefined **
 
 ** start of undefined **
 
-header{
-	background-color: #FFC300;
-	font-size: 36px;
-	text-align: center;
-	border-radius: 10px;
-}
-body, #survey-form{
-	background-color: #FFD452;
-}
-footer{
-	text-align: center;
-}
 
-#div1{	
-	background-color: #FFC000;
-	flex-direction: row;
-	display: flex;
-	border-radius: 10px;
-}
-#div2{
-	background-color: #FFC000;
-	margin-top: 10px;
-	padding: 10px;
-	padding-left: 23%;
-	border-radius: 10px;
-}
-#div3{
-	background-color: #FFC000;
-	margin-top: 10px;
-	padding: 10px;
-	padding-left: 23%;
-	padding-right: 23%;
-	flex-direction: column;
-	display: flex;
-	border-radius: 10px;
-}
-#Lista1{
-	order: 1;
-	margin-left: 20%;
-}
-
-#pokeball{
-	height: 200px;
-	width: 200px;
-	order: 2;
-}
-select.icon-menu option{
-	background-repeat: no-repeat;
-	background-position: bottom left;
-	padding-left: 30px;
-}
-select#dropdown option[value="bulbasaur"]{
-	background-color: #2EFF00;
-}
-select#dropdown option[value="charmander"]{
-	background-color: #FF0000;
-}
-select#dropdown option[value="squirtler"]{
-	background-color: #52F2FF;
-}
 
 ** end of undefined **
 
