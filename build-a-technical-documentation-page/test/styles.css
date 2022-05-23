@@ -9,6 +9,8 @@ html{
 footer{
   text-align: center;
   margin-top: 30px;
+  border: solid;
+  background-color: #F7F0F0;
 }
 #navbar{
   position: fixed;
@@ -28,6 +30,7 @@ footer{
   margin-left: 305px;
   text-align: left;
   border-top: solid;
+  border-bottom: solid;
   border-left: solid;
   background-color: #F7F0F0;
   padding-bottom: 30px;
