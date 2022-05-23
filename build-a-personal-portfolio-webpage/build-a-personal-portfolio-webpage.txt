@@ -1,0 +1,39 @@
+** start of undefined **
+
+<link rel="stylesheet" href="styles.css">
+<section id="welcome-section">
+	<h1>h1</h1>
+</section>
+<section id="projects">
+	<h4 class="project-tile">h4</h4>
+	<a href=" #test">test</a>
+</section>
+<nav id="navbar">
+	<a href="#welcome-section">welcome-section</a>
+	<a href="#projects">project</a>
+</nav>
+<a id="profile-link" href="" target="_blank"></a>
+
+** end of undefined **
+
+** start of undefined **
+
+#navbar {
+  position: fixed;
+  top: 0px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#welcome-section{
+  padding-top: 20px;
+}
+@media(max-width:400px){
+  #welcome-section{
+    margin-left: -5px;
+  }
+}
+
+** end of undefined **
+
