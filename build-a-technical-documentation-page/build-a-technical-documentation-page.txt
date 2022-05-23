@@ -1,0 +1,88 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html>
+	<main id="main-doc">
+  		<link rel="stylesheet" href="styles.css">
+  		<section id="SA" class="main-section">
+    		<header>SA</header>
+    		<ul>
+      			<li><p></p>
+      			</li>
+     		 	<li><p><code></code></p>
+     		 	</li>
+   	 		</ul>
+  		</section>
+  		<section id="SB" class="main-section">
+   		 <header>SB</header>
+    		<ul>
+     			<li><p></p>
+      			</li>
+      			<li><p><code></code></p>
+      			</li>
+    		</ul>
+  		</section>
+  		<section id="SC" class="main-section">
+    		<header>SC</header>
+    		<ul>
+      			<li><p></p>
+      			</li>
+      			<li><p><code></code></p>
+     			</li>
+    		</ul>
+  		</section>
+  		<section id="SD" class="main-section">
+    		<header>SD</header>
+    		<ul>
+      			<li><p></p>
+      			</li>
+      			<li><p><code></code></p>
+      			</li>
+    		</ul>
+  		</section>
+  		<section id="SE" class="main-section">
+    		<header>SE</header>
+    		<ul>
+      			<li><p></p>
+      			</li>
+      			<li><p><code></code></p>
+      			</li>
+    		</ul>
+  		</section>
+</main>
+  <nav id="navbar">
+    <header>navbar</header>
+    <a class="nav-link" href="#SA">SA</a>
+    <a class="nav-link" href="#SB">SB</a>
+    <a class="nav-link" href="#SC">SC</a>
+    <a class="nav-link" href="#SD">SD</a>
+    <a class="nav-link" href="#SE">SE</a>
+  </nav>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+#navbar{
+  position: fixed;
+  width: 300px;
+  border-color: #000000;
+  border-right: solid;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+#main-doc{
+  margin-left: 300px;
+}
+@media(max-width:400px){
+  #main-doc{
+    margin-left: -5px;
+  }
+}
+
+** end of undefined **
+
