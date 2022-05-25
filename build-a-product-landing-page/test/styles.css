@@ -1,0 +1,10 @@
+#nav-bar{
+  position: fixed;
+  display: flex;
+  top: 0px;
+  flex-direction: row;
+}
+#header-img {
+  width: 200px;
+  height: auto;
+}
