@@ -70,4 +70,7 @@ console.log(notCapitalCities(arrCities2))
 
 
 //Ejercicio 06
-                                  
+const toFixed2 = (nFloat, nDecimals) => { return Math.floor(nFloat * (Math.pow(10, nDecimals) ) ) / (Math.pow(10, nDecimals))}
+
+
+
