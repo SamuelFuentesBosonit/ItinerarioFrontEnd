@@ -70,7 +70,23 @@ console.log(notCapitalCities(arrCities2))
 
 
 //Ejercicio 06
-const toFixed2 = (nFloat, nDecimals) => { return Math.floor(nFloat * (Math.pow(10, nDecimals) ) ) / (Math.pow(10, nDecimals))}
+const toFixed2 = (nFloat, nDecimals) => { return Math.round(nFloat * (Math.pow(10, nDecimals) ) ) / (Math.pow(10, nDecimals))}
+
+console.log(toFixed2(2.12355,3))
+
+
+//Ejercicio 7
+const falsy = ( obj, type ) => { for( var values in obj ){
+  if( type( obj[values] ) ){
+     delete obj[values];
+     }
+	}
+	return obj
+}
+
+const falsyValues = falsy({ a: 1, b: '2', c: 3 }, x => typeof x === 'string')
+ 
+console.log(falsyValues);
 
 
 
