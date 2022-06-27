@@ -1,5 +1,5 @@
 //Ejercicio 8
-const test = (val) => {
+const test = ( val ) => {
   let legibles = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
   let cont = 0;
   //trabajamos con negativos menores de 1000 y positivos mayores de 1000
