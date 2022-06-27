@@ -9,15 +9,27 @@ const arrNames = [
 
 const idElegido = (id) => { return arrNames[id-1] }
 
+console.log(idElegido(1))
+console.log(idElegido(2))
 console.log(idElegido(3))
+console.log(idElegido(4))
+console.log(idElegido(5))
 
 
 //Ejercicio 02
 const arrDirty = [NaN, 0, 5, false, -1, '',undefined, 3, null, 'test']
+const arrDirt = [1, 20, 'pikachu']
+const arrDir = ['', '', '']
+const arrDi = [1,2,3]
+const arrD = ['uno', 'dos', 'tres']
+
 const arrTruthy = (arr) => { return arr.filter(Boolean).filter( n => typeof n !== 'number' ) }
 
 console.log(arrTruthy(arrDirty))
-
+console.log(arrTruthy(arrDirt))
+console.log(arrTruthy(arrDir))
+console.log(arrTruthy(arrDi))
+console.log(arrTruthy(arrD))
 
 //Ejercicio 03
 const arrCities = [
@@ -87,6 +99,3 @@ const falsy = ( obj, type ) => { for( var values in obj ){
 const falsyValues = falsy({ a: 1, b: '2', c: 3 }, x => typeof x === 'string')
  
 console.log(falsyValues);
-
-
-
