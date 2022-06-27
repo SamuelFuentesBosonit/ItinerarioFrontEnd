@@ -9,7 +9,8 @@ const fromBytesToFormattedSizeUnits = ( val ) => {
   if(val>=0){
       return Math.round(val) + legibles[cont]
   }else{
-      return Math.round(val * (Math.pow(10, 3) ) ) / (Math.pow(10, 3)) + legibles[cont]
+      //solo he utilizado toFixed(3) aqui, para que el resultado fuera el del ejemplo
+      return val.toFixed(3) + legibles[cont]
   }
 }
 

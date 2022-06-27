@@ -1,4 +1,4 @@
 //Ejercicio 06
-const toFixed2 = (nFloat, nDecimals) => { return Math.round(nFloat * (Math.pow(10, nDecimals) ) ) / (Math.pow(10, nDecimals))}
+const roundTo = (nFloat, nDecimals) => { return Math.round(nFloat * (Math.pow(10, nDecimals) ) ) / (Math.pow(10, nDecimals))}
 
-console.log(toFixed2(2.12355,3))
+console.log(roundTo(2.12355,3))

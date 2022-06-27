@@ -9,8 +9,4 @@ const arrNames = [
 
 const idElegido = (id) => { return arrNames[id-1] }
 
-console.log(idElegido(1))
-console.log(idElegido(2))
 console.log(idElegido(3))
-console.log(idElegido(4))
-console.log(idElegido(5))

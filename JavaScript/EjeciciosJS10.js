@@ -1,4 +1,4 @@
-//Ejercicio10
+//Ejercicio 10
 const removeHTMLTags = ( codigo ) => {
   return codigo.replace( /(<([^>]+)>)/ig, '')
 }
