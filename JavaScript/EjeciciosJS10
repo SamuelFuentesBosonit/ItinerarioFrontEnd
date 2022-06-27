@@ -1,12 +1,8 @@
-//Ejercicio 9
-
-const myObjLowercase = ( obj ) => {
-  let lowerObj = new Object();
-  Object.entries(obj).map(([key, value]) => {
-    lowerObj[key.toLowerCase()] = value
-  })
-  return lowerObj
+//Ejercicio10
+const removeHTMLTags = ( codigo ) => {
+  return codigo.replace( /(<([^>]+)>)/ig, '');
 }
 
-let myObject = { NamE: 'Charles', ADDress: 'Home Street' };
-console.log(myObjLowercase(myObject));
+const result = ('<div><span>lorem</span> <strong>ipsum</strong></div>');
+ 
+console.log(removeHTMLTags(result)); // lorem ipsum
