@@ -6,11 +6,11 @@
     <hr class="text-white"/>
 
     <div class="list-group list-reset">
-
       <a 
-      hreft="#"
-      class="list-group-item list-group-item-action">
-        Dashboard
+        *ngFor="let item of historial"
+        href="#"
+        class="list-group-item list-group-item-action">
+        {{ item }}
       </a>
 
     </div>
