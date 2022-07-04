@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { GifsService } from '../services/gifs.service';
 
 @Component({
   selector: 'app-busqueda',
-  templateUrl: './busqueda.component.html',
-  styleUrls: ['./busqueda.component.css']
+  templateUrl: './busqueda.component.html'
 })
-export class BusquedaComponent implements OnInit {
+export class BusquedaComponent {
 
-  constructor() { }
+  @ViewChild('txtBuscar') txtBuscar!:ElementRef<HTMLInputElement>;
+  
+  constructor( private gifsService: GifsService) {}
+  
+  buscar() {
+    
+    const valor = this.txtBuscar.nativeElement.value;
 
-  ngOnInit(): void {
+    this.gifsService.buscarGifs ( valor );
+
+    this.txtBuscar.nativeElement.value = '';
   }
-
 }
