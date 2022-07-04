@@ -1,21 +1,16 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-gifs-page',
-  templateUrl: './gifs-page.component.html'
+  templateUrl: './gifs-page.component.html',
+  styles: [
+  ]
 })
-export class GifsPageComponent {
+export class GifsPageComponent implements OnInit {
 
-  @ViewChild('#txtBuscar') txtBuscar!: ElementRef<HTMLInputElement>;
+  constructor() { }
 
-  buscar( ) {
-
-    const valor = this.txtBuscar.nativeElement.value;
-
-    console.log( this.txtBuscar);
-
-    this.txtBuscar.nativeElement.value = '';
+  ngOnInit(): void {
   }
-
 
 }
