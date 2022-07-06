@@ -17,14 +17,14 @@ export class VerPaisComponent implements OnInit {
 
   ngOnInit(): void {
     
-    this.activatedRoute.params
+    /*this.activatedRoute.params
     .subscribe( ({ id }) => {
       console.log(id);
       this.paisService.getPaisPorAlpha( id )
       .subscribe( pais => {
         console.log(pais);
       })
-    })
+    })*/
   }
 
 }
