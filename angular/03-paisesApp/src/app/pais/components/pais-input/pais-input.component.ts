@@ -9,6 +9,7 @@ import { debounceTime } from 'rxjs/operators';
   ]
 })
 export class PaisInputComponent implements OnInit {
+  
 
   @Output() onEnter   : EventEmitter<string> = new EventEmitter();
   @Output() onDebounce: EventEmitter<string> = new EventEmitter();
@@ -34,5 +35,5 @@ export class PaisInputComponent implements OnInit {
   teclaPresionada() {
     this.debouncer.next( this.termino );
   }
-
+  
 }
