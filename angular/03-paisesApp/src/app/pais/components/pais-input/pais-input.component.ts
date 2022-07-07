@@ -17,23 +17,21 @@ export class PaisInputComponent implements OnInit {
 
   debouncer: Subject<string> = new Subject();
 
-  termino : string = '';
-
-  constructor() { }
+  termino: string = '';
 
   ngOnInit() {
     this.debouncer
-    .pipe(debounceTime(300))
-    .subscribe( valor => {
-      this.onDebounce.emit( valor );
-    });
+      .pipe(debounceTime(300))
+      .subscribe( valor => {
+        this.onDebounce.emit( valor );
+      });
   }
 
   buscar() {
     this.onEnter.emit( this.termino );
   }
 
-  teclaPrecionada(  ) {
+  teclaPresionada() {
     this.debouncer.next( this.termino );
   }
 

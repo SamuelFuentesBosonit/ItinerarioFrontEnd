@@ -17,21 +17,18 @@ export class PorCapitalComponent {
   constructor( private paisService: PaisService ) { }
 
   buscar( termino: string ) {
-
+    
     this.hayError = false;
-    this.termino = termino;
-    console.log(this.termino);
+    this.termino  = termino;
 
-    this.paisService.buscarPais( this.termino )
-    .subscribe( (paises) => {
-      console.log(paises);
-      this.paises = paises;
-      
-    }, ( err ) => {
-      this.hayError = true;
-      this.paises = [];
-    }
-    );
+    this.paisService.buscarCapital( termino )
+      .subscribe( (paises) => {
+        this.paises = paises;
+      }, (err) => {
+        this.hayError = true;
+        this.paises   = [];
+      });
+
   }
 
 }
