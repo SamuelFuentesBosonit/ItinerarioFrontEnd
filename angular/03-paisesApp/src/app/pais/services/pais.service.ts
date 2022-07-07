@@ -27,12 +27,10 @@ export class PaisService {
     return this.http.get<Country[]>( url );
   }
 
-  getPaisPorAlpha( termino: string ): Observable<Country> {
-
+  getPaisPorAlpha( id: string ):Observable<Country>{
     const url = `${ this.apiUrl }/alpha/${ id }`;
-
     return this.http.get<Country>( url );
   }
 }
 
-// 115
+// 115 1:12
