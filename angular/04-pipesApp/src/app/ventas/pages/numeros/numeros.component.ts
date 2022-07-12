@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-numeros',
@@ -6,9 +6,11 @@ import { Component } from '@angular/core';
   styles: [
   ]
 })
-export class NumerosComponent {
+export class NumerosComponent implements OnInit {
 
-  ventasNetas: number = 2567789.5567;
-  porcentaje : number = 0.4856;
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 
 }
