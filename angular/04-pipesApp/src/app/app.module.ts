@@ -3,14 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
-//primeNG personalizado
+// personalizado
 import { SharedModule } from './shared/shared.module';
+import { AppRouterModule } from './app-router.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    AppRouterModule,
     BrowserModule,
     SharedModule
   ],
