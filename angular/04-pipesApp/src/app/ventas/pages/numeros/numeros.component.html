@@ -12,10 +12,16 @@
         {{ ventasNetas | number:'1.2-2' }}
         <i class="pi pi-euro"></i>
     </p-card>
-    <p-card
-        class="m-3">
+    <p-card 
+        class="m-3"
+        header="Ventas Brutas"
+        subheader="del presente año">
+        {{ ventasNetas + 2000000 | currency:'€' }}
     </p-card>
-    <p-card
-        class="m-3">
+    <p-card 
+        class="m-3"
+        header="Ganancias porcentual"
+        subheader="del presente año">
+        {{ porcentaje | percent:'2.2-2' }}
     </p-card>
 </div>
