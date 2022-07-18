@@ -10,15 +10,33 @@
         class="m-3"
         legend="il18nSelect Pipe"
         [toggleable]="true">
-        Saludos {{ nombre }}, es un placer 
-        {{ genero | i18nSelect: invitacionMapa }} 
-        a nuestro evento.
+        <p> 
+            Saludos {{ nombre }}, es un placer 
+            {{ genero | i18nSelect: invitacionMapa }} 
+            a nuestro evento.
+        </p>
+        <button 
+            pButton
+            (click)="cambiarCliente()"
+            type="button" 
+            label="Cambiar Persona" 
+            class="p-button-help">
+        </button>
+
     </p-fieldset>
     <p-fieldset
         class="m-3"
         legend="il18nPlural Pipe"
         [toggleable]="true">
-        
-        Actualmente tenemos {{ clientes.length | i18nPlural: clientesMapa}} 
+        <p>
+            Actualmente tenemos {{ clientes.length | i18nPlural: clientesMapa }}
+        </p> 
+        <button 
+            pButton 
+            (click)="borrarCliente()"
+            type="button" 
+            label="Borrar Cliente" 
+            class="p-button-warning">
+        </button>
 </p-fieldset>
 </div>
