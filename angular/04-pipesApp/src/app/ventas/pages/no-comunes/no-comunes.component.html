@@ -40,6 +40,7 @@
         </button>
     </p-fieldset>
 </div>
+
 <div class="flex col">
     <p-fieldset
         class="m-3"
@@ -54,6 +55,14 @@
         <b>slice:1:3</b>
         <pre>{{ clientes | slice:0:2 }}</pre>
     </p-fieldset>
+
+    <p-fieldset
+        class="m-3"
+        legend="Json Pipe"
+        [toggleable]="true">
+        <pre> {{ heroes |json }}</pre>
+    </p-fieldset>
+
     <p-fieldset
         class="m-3"
         legend="KeyValue Pipe"
@@ -65,3 +74,4 @@
         </ul>
     </p-fieldset>
 </div>
+

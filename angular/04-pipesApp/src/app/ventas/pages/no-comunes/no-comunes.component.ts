@@ -42,4 +42,20 @@ export class NoComunesComponent {
     direccion: 'Sevilla, España'
   }
 
+  //Json Pipe
+  heroes = [
+    {
+      nombre: 'Superman',
+      vuela: true
+    },
+    {
+      nombre: 'Batman',
+      vuela: false
+    },
+    {
+      nombre: 'Aquaman',
+      vuela: false
+    }
+  ]
+
 }
