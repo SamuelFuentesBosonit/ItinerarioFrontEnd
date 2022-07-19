@@ -6,10 +6,14 @@ import { Heroe } from '../interfaces/ventas.interfaces';
 })
 export class OrdenarPipe implements PipeTransform {
 
-  transform(valueHe: Heroe[] ): Heroe[] {
+  transform(valueHe: Heroe[], ordenarPor: string = 'sin valor' ): Heroe[] {
 
-    valueHe = valueHe.sort(( a,b ) => ( a.nombre > b.nombre ) ? 1 : -1 );
-    return valueHe;
+    if( ordenarPor === 'sin valor' ){
+      return valueHe;
+    }else{
+      valueHe = valueHe.sort( ( a,b ) => ( a.nombre > b.nombre ) ? 1 : -1 );
+      return valueHe;
+    }
   }
 
 }
