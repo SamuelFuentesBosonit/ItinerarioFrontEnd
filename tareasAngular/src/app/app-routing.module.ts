@@ -1,4 +1,14 @@
-import { NgModule } from '@angular/core';
+import { Routes } from '@angular/router';
+
+const routes: Routes = [
+  {
+    path: 'items',
+    loadChildren: () => import('./tareas/tareas.module').then(m => m.TareasModule)
+  }
+];
+
+
+/*import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Tarea01Component } from './tareas/pages/tarea01/tarea01.component';
 import { Tarea02Component } from './tareas/pages/tarea02/tarea02.component';
@@ -50,4 +60,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { }*/

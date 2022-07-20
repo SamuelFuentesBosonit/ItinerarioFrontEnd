@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PrimeNgModule } from './prime-ng/prime-ng.module';
 
 @Component({
   selector: 'app-root',

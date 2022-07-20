@@ -10,6 +10,7 @@ import { Tarea07Component } from './pages/tarea07/tarea07.component';
 
 
 
+
 @NgModule({
   declarations: [
     Tarea01Component,
