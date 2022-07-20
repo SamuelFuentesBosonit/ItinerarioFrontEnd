@@ -8,9 +8,8 @@ import { TareasRouting } from './tareas/tareas-routing.module';
 
 //Modulos propios
 import { SharedModule } from './shared/shared.module';
-
-
-
+import { PrimeNgModule } from './prime-ng/prime-ng.module';
+import { TareasModule } from './tareas/tareas.module';
 
 
 @NgModule({
@@ -20,8 +19,10 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule,
     //AppRoutingModule,
+    PrimeNgModule,
     TareasRouting,
-    SharedModule
+    SharedModule,
+    TareasModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 //primeNG
 import { MenuItem } from 'primeng/api';
-import { Tarea02Component } from '../../tareas/pages/tarea02/tarea02.component';
 
 @Component({
   selector: 'app-navbar',
