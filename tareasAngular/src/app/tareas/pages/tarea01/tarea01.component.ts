@@ -13,19 +13,19 @@ export class Tarea01Component implements OnInit {
   ngOnInit(): void {
   }
 
-  imgOne  : string = 'assets/images/one.png';
-  imgTwo  : string = 'assets/images/two.gif';
-  one     : string = 'visible';
-  two     : string = 'hidden';
-
-  display(){
-    if (this.one === 'visible') {
-      this.one = 'hidden';
-      this.two = 'visible';
-    } else {
-      this.one = 'visible';
-      this.two = 'hidden';
-    }
+  imgOne    : string = 'assets/images/one.png';
+  imgTwo    : string = 'assets/images/two.gif';
+  isVisible : string = 'visible';
+  eEgg      : string = 'hidden';
+  //display and hide img
+  displayHide(){
+    (this.isVisible === 'visible')
+    ? this.isVisible = 'hidden'
+    : (this.isVisible = 'visible', this.eEgg = 'hidden');
   }
-
+  //display the EasterEgg
+  easterEgg(){
+    this.isVisible = 'hidden';
+    this.eEgg = 'visible';
+  }
 }

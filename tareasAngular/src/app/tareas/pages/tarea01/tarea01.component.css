@@ -4,7 +4,7 @@ img {
     height:400px;
     width:400px;
     margin-top: 50px;
-    margin-left: 43%;
+    margin-left: 41%;
 }
 button {
     position:absolute;
@@ -14,4 +14,7 @@ button {
 }
 .text-center {
     text-align: center;
+}
+.egg {
+    font-size: 10px;
 }

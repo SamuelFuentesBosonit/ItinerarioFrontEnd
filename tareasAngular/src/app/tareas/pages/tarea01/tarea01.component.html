@@ -6,24 +6,21 @@
     <button 
         pButton 
         type="button" 
-        label="Display"
-        (click)="display()"
-        [style.visibility]="one">
-    </button>
-
-    <button 
-        pButton 
-        type="button" 
-        label="Hide"
-        (click)="display()"
-        [style.visibility]="two">
-    </button>
+        [label]="isVisible | titlecase"
+        (click)="displayHide()">
+</button>
 </div>
 <div>
     <img 
         [src]="imgOne"
-        [style.visibility]="one">
+        [style.visibility]="isVisible"
+        (click)="easterEgg()"
+        alt="For a easter click on the image.">
+        <!--EasterEgg-->
     <img 
-        [src]="imgTwo" 
-        [style.visibility]="two">
+        [src]="imgTwo"
+        [style.visibility]="eEgg"
+        (click)="displayHide()">
 </div>
+    
+
