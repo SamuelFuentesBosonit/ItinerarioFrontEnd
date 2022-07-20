@@ -1,2 +1,29 @@
-<h1>Who is that Pokemon?</h1>
-<button pButton type="button" label="Click" ></button>
+<div class="text-center">
+    <h1>Display Hide</h1>
+    <h2>Who is that Pokemon?</h2>
+</div>
+<div>
+    <button 
+        pButton 
+        type="button" 
+        label="Display"
+        (click)="display()"
+        [style.visibility]="one">
+    </button>
+
+    <button 
+        pButton 
+        type="button" 
+        label="Hide"
+        (click)="display()"
+        [style.visibility]="two">
+    </button>
+</div>
+<div>
+    <img 
+        [src]="imgOne"
+        [style.visibility]="one">
+    <img 
+        [src]="imgTwo" 
+        [style.visibility]="two">
+</div>
