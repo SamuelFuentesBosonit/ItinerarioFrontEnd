@@ -12,6 +12,7 @@ export class OrdenarComponent {
   enMayusculas: boolean = true;
 
   ordenarPor: string = '';
+  
   heroes: Heroe[] = [
     {
       nombre: 'Superman',
