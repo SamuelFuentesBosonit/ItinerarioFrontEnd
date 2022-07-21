@@ -3,7 +3,10 @@ import { CommonModule } from '@angular/common';
 
 //componentes Propios
 import { Tarea01Component } from './pages/tarea01/tarea01.component';
+//tarea02
 import { Tarea02Component } from './pages/tarea02/tarea02.component';
+import { ParentComponent } from './pages/tarea02/parent/parent.component';
+import { ChildComponent } from './pages/tarea02/child/child.component';
 import { Tarea03Component } from './pages/tarea03/tarea03.component';
 import { Tarea04Component } from './pages/tarea04/tarea04.component';
 import { Tarea05Component } from './pages/tarea05/tarea05.component';
@@ -14,15 +17,20 @@ import { Tarea07Component } from './pages/tarea07/tarea07.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
 
+
 @NgModule({
   declarations: [
     Tarea01Component,
+    //tarea02
     Tarea02Component,
+    ParentComponent,
+    ChildComponent,
     Tarea03Component,
     Tarea04Component,
     Tarea05Component,
     Tarea06Component,
     Tarea07Component
+
 
   ],
   imports: [
