@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 //components
+import { ChildComponent } from './communication-parent-child/child/child.component';
 import { CommunicationParentChildComponent } from './communication-parent-child/communication-parent-child.component';
 import { CounterComponent } from './counter/counter.component';
 import { CrudComponent } from './crud/crud.component';
@@ -12,8 +13,6 @@ import { SearchOnTypeComponent } from './search-on-type/search-on-type.component
 
 //primeNG
 import { PrimengModule } from './primeng.module';
-import { ChildComponent } from './communication-parent-child/child/child.component';
-
 
 @NgModule({
   declarations: [
