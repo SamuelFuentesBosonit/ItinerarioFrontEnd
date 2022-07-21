@@ -1,1 +1,28 @@
-<p>display-hide works!</p>
+
+<div class="text-center">
+        <h1>Display Hide</h1>
+        <h2>Who is that Pokemon?</h2>
+</div>
+<div>
+    <!--El nombre del botón, expone el estado de la imagen,
+        en vez de su función, para así, poder manejar el método,
+        con una única variable-->
+    <button 
+        pButton 
+        type="button" 
+        [label]="isVisible | titlecase"
+        (click)="displayHide()">
+    </button>
+</div>
+<div>
+    <img 
+        [src]="imgOne"
+        [style.visibility]="isVisible"
+        (click)="easterEgg()"
+        alt="For a easter click on the image.">
+        <!--EasterEgg-->
+        <img 
+        [src]="imgTwo"
+        [style.visibility]="eEgg"
+        (click)="displayHide()">
+</div>
