@@ -1,0 +1,14 @@
+.text-center {
+    text-align: center;
+}
+
+.b {
+    border-color: aliceblue;
+    border-width: medium;
+    border-style: solid;
+    margin: 10px;
+}
+
+button {
+    margin: 5px;
+}

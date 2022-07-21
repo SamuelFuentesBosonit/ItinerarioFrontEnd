@@ -13,6 +13,7 @@ import { Tarea07Component } from './pages/tarea07/tarea07.component';
 //primeNG propio
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
+
 @NgModule({
   declarations: [
     Tarea01Component,
@@ -21,7 +22,7 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
     Tarea04Component,
     Tarea05Component,
     Tarea06Component,
-    Tarea07Component,
+    Tarea07Component
 
   ],
   imports: [
