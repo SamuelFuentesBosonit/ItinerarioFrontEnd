@@ -1,1 +1,29 @@
-<p>communication-parent-child works!</p>
+<div class="text-center b p">
+    <h1>PARENT</h1>
+    <p>message: {{ fromChild }}</p>
+    <div>
+        <button 
+            pButton 
+            type="button" 
+            label="Use Service"
+            (click)="parentService()"></button>
+        <button 
+            pButton 
+            type="button" 
+            label="Use Input Property"
+            (click)="parentInput()"></button>
+        <button 
+            pButton 
+            type="button" 
+            label="Use Observable"
+            (click)="parentObservable()"></button>
+    </div>
+    <app-child
+        [message]="toChild"             
+        (messageToParen)="message($event)"></app-child>
+        <button 
+            pButton 
+            type="button" 
+            label="Clean"
+            (click)="clean()"></button>
+</div>

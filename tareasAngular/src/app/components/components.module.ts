@@ -12,10 +12,12 @@ import { SearchOnTypeComponent } from './search-on-type/search-on-type.component
 
 //primeNG
 import { PrimengModule } from './primeng.module';
+import { ChildComponent } from './communication-parent-child/child/child.component';
 
 
 @NgModule({
   declarations: [
+    ChildComponent,
     CommunicationParentChildComponent,
     CounterComponent,
     CrudComponent,
