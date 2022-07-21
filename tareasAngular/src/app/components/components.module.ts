@@ -1,29 +1,32 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DisplayHideComponent } from './display-hide/display-hide.component';
-import { ComunicationParentChildComponent } from './comunication-parent-child/comunication-parent-child.component';
-import { CommunicationParentChildComponent } from './communication-parent-child/communication-parent-child.component';
-import { CrudComponent } from './crud/crud.component';
-import { SearchOnTypeComponent } from './search-on-type/search-on-type.component';
-import { LightSwitchComponent } from './light-switch/light-switch.component';
-import { ExternalLibraryWithDataComponent } from './external-library-with-data/external-library-with-data.component';
-import { CounterComponent } from './counter/counter.component';
 
+//components
+import { CommunicationParentChildComponent } from './communication-parent-child/communication-parent-child.component';
+import { CounterComponent } from './counter/counter.component';
+import { CrudComponent } from './crud/crud.component';
+import { DisplayHideComponent } from './display-hide/display-hide.component';
+import { ExternalLibraryWithDataComponent } from './external-library-with-data/external-library-with-data.component';
+import { LightSwitchComponent } from './light-switch/light-switch.component';
+import { SearchOnTypeComponent } from './search-on-type/search-on-type.component';
+
+//primeNG
+import { PrimengModule } from './primeng.module';
 
 
 @NgModule({
   declarations: [
-    DisplayHideComponent,
-    ComunicationParentChildComponent,
     CommunicationParentChildComponent,
+    CounterComponent,
     CrudComponent,
-    SearchOnTypeComponent,
-    LightSwitchComponent,
+    DisplayHideComponent,
     ExternalLibraryWithDataComponent,
-    CounterComponent
+    LightSwitchComponent,
+    SearchOnTypeComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PrimengModule
   ]
 })
 export class ComponentsModule { }
