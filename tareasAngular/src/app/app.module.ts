@@ -1,15 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-//import { AppRoutingModule } from './app-routing.module';
-//lazyLoad
-import { TareasRouting } from './tareas/tareas-routing.module';
-
-//Modulos propios
-import { SharedModule } from './shared/shared.module';
-import { PrimeNgModule } from './prime-ng/prime-ng.module';
-import { TareasModule } from './tareas/tareas.module';
 
 
 @NgModule({
@@ -18,11 +11,7 @@ import { TareasModule } from './tareas/tareas.module';
   ],
   imports: [
     BrowserModule,
-    //AppRoutingModule,
-    PrimeNgModule,
-    TareasRouting,
-    SharedModule,
-    TareasModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
