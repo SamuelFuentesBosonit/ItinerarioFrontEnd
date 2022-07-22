@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 //services
-import { DataService } from 'src/app/services/data.service';
+import { CommunicationService } from 'src/app/services/communication.service';
 
 @Component({
   selector: 'app-communication-parent-child',
@@ -13,11 +13,11 @@ export class CommunicationParentChildComponent {
   toChild   : string = '';
   fromChild : string = '';
 
-  constructor( private dataService: DataService ) { }
+  constructor( private communicationService: CommunicationService ) { }
 
   //service
   parentService () {
-    this.toChild = this.dataService.sendTochild();
+    this.toChild = this.communicationService.sendTochild();
   }
 
   //input
@@ -31,7 +31,7 @@ export class CommunicationParentChildComponent {
 
   //observable
   parentObservable () {
-    this.dataService.sendFromParent()
+    this.communicationService.sendFromParent()
       .subscribe( message => {
         console.log(message)
         this.toChild = message;

@@ -6,8 +6,8 @@ import { MenuItem } from 'primeng/api';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styles: [
-  ]
+  styleUrls: []
+  
 })
 export class NavbarComponent implements OnInit {
 

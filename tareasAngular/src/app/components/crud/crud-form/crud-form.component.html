@@ -1,12 +1,60 @@
-<p>Formulario de Registro</p>
-<div>
+
+<div class="b">
+    <h1>Formulario de Registro</h1>
     <!--Nombre de usuario-->
-    <div>
+    <div class="l">
         <label>Nombre de usuario</label>
         <input 
             type="text" 
             class="form-control"
             formControlName="name">
-
     </div>
+
+    <!--Contraseña-->
+    <div class="l">
+        <label>Contraseña</label>
+        <input 
+            type="password" 
+            class="form-control"
+            formControlName="pass">
+    </div>
+
+    <!--Confirma la Contraseña-->
+    <div class="l">
+        <label>Confirma la Contraseña</label>
+        <input 
+            type="password" 
+            class="form-control"
+            formControlName="passConfirm">
+    </div>
+
+    <!--Correo-->
+    <div class="l">
+        <label>Correo</label>
+        <input 
+            type="email" 
+            class="form-control"
+            formControlName="mail">
+    </div>
+
+    <!--checkbox-->
+    <div>
+        
+    </div>
+    <!--País-->
+    <div class="l">
+        <label>País</label>
+        <input 
+            type="texts" 
+            class="form-control"
+            formControlName="country">
+    </div>
+    <div class="l">
+        <label>Ciudad</label>
+        <input 
+            type="text" 
+            class="form-control"
+            formControlName="city">
+    </div>
+    <button pButton label="Crear" style="margin: 5px;"></button>   
 </div>

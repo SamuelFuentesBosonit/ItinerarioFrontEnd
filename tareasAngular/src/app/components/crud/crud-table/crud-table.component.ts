@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+//interfaces
+import { Usser } from '../../../interfaces/usser.interface';
 
 @Component({
   selector: 'app-crud-table',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./crud-table.component.css']
 })
 export class CrudTableComponent implements OnInit {
+
+  @Input() ussers: Usser[] = []
 
   constructor() { }
 

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { DataService } from 'src/app/services/data.service';
+import { CommunicationService } from 'src/app/services/communication.service';
 
 @Component({
   selector: 'app-child',
@@ -11,11 +11,11 @@ export class ChildComponent {
   @Input() message: string = '';
   @Output() messageToParen = new EventEmitter<string>();
   
-  constructor( private dataService: DataService ) { }
+  constructor( private communicationService: CommunicationService ) { }
 
   //service
   childService () {
-    this.messageToParen.emit( this.dataService.sendTochild() )
+    this.messageToParen.emit( this.communicationService.sendTochild() )
   } 
 
   //output
@@ -25,7 +25,7 @@ export class ChildComponent {
 
   //observable
   childObservable () {
-    this.dataService.sendFromChild()
+    this.communicationService.sendFromChild()
       .subscribe( message => {
         this.messageToParen.emit( message );
       })
