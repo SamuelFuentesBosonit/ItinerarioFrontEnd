@@ -11,6 +11,7 @@ import { CommunicationParentChildComponent } from '../components/communication-p
 })
 export class DataService {
 
+//tarea 02 communication-parent-child
   childComponent! : ChildComponent
   parentComponent!: CommunicationParentChildComponent
 
