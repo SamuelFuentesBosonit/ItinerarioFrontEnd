@@ -2,6 +2,7 @@ import { Injectable, EventEmitter } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 //components
+//tarea 02 communication-parent-child
 import { ChildComponent } from '../components/communication-parent-child/child/child.component';
 import { CommunicationParentChildComponent } from '../components/communication-parent-child/communication-parent-child.component';
 
