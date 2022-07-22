@@ -7,18 +7,15 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['../communication-parent-child.component.css']
 })
 export class ChildComponent {
-
   //input output
   @Input() message: string = '';
   @Output() messageToParen = new EventEmitter<string>();
-
-  constructor( private dataService: DataService ) {
-    dataService.childComponent = this;
-   }
+  
+  constructor( private dataService: DataService ) { }
 
   //service
   childService () {
-    this.dataService.parentComponent.fromChild = 'CHILD USING SERVICE';
+    this.messageToParen.emit( this.dataService.sendTochild() )
   } 
 
   //output
@@ -32,6 +29,6 @@ export class ChildComponent {
       .subscribe( message => {
         this.messageToParen.emit( message );
       })
-  }
+  }  
   
 }

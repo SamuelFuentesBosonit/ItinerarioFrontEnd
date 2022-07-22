@@ -10,16 +10,14 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class CommunicationParentChildComponent {
 
-  toChild: string = '';
-  fromChild: string = '';
+  toChild   : string = '';
+  fromChild : string = '';
 
-  constructor( private dataService: DataService ) { 
-    dataService.parentComponent = this
-  }
+  constructor( private dataService: DataService ) { }
 
   //service
   parentService () {
-    this.dataService.childComponent.message = 'PARENT USING SERVICE';
+    this.toChild = this.dataService.sendTochild();
   }
 
   //input
@@ -35,13 +33,9 @@ export class CommunicationParentChildComponent {
   parentObservable () {
     this.dataService.sendFromParent()
       .subscribe( message => {
+        console.log(message)
         this.toChild = message;
       })
   }
-  //clean
-  clean () {
-    this.dataService.childComponent.message = ''
-    this.fromChild = '';
-  }
-
+  
 }

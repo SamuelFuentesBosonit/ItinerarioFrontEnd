@@ -12,34 +12,27 @@ import { CommunicationParentChildComponent } from '../components/communication-p
 export class DataService {
 
 //tarea 02 communication-parent-child
-  childComponent! : ChildComponent
-  parentComponent!: CommunicationParentChildComponent
 
-  //service
-  serviceFromParent: string = 'PARENT USING SERVICE';
-  serviceFromChild : string = 'CHILD USING SERVICE';
-  
   //observable
-  parentObservable : string = 'PARENT USING OBSERVABLE';
-  childObservable  : string = 'CHILD USING OBSERVABLE';
-  
-  private subjectParent : BehaviorSubject<string> = new BehaviorSubject<string>(this.parentObservable);
-  private subjectChild  : BehaviorSubject<string> = new BehaviorSubject<string>(this.childObservable);
+  private _Parent : BehaviorSubject<string> = new BehaviorSubject<string>( 'PARENT USING SUBJECT' );
+  private _Child  : BehaviorSubject<string> = new BehaviorSubject<string>( 'CHILD USING SUBJECT' );
 
   constructor() { }
 
   //service
-  sendToParent(){
-    return this.serviceFromChild;
+  sendToParent () {
+    return 'CHILD USING SERVICE';
   }
-  sendTochild(){
-    return this.serviceFromParent;
+  sendTochild () {
+    return 'PARENT USING SERVICE';
   }
+
   //observable
-  sendFromParent(){
-    return this.subjectParent.asObservable();
+  sendFromParent () {
+    return this._Parent.asObservable();
   }
-  sendFromChild(){
-    return this.subjectChild.asObservable();
+  sendFromChild () {
+    return this._Child.asObservable();
   }
+  
 }

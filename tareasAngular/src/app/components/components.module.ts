@@ -9,6 +9,8 @@ import { ChildComponent } from './communication-parent-child/child/child.compone
 import { CommunicationParentChildComponent } from './communication-parent-child/communication-parent-child.component';
 //tarea 03 crud
 import { CrudComponent } from './crud/crud.component';
+import { CrudTableComponent } from './crud/crud-table/crud-table.component';
+import { CrudFormComponent } from './crud/crud-form/crud-form.component';
 //tarea 04  search-on-type
 import { SearchOnTypeComponent } from './search-on-type/search-on-type.component';
 //tarea 05 light-switch
@@ -30,6 +32,8 @@ import { PrimengModule } from './primeng.module';
     CommunicationParentChildComponent,
     //tarea 03 crud
     CrudComponent,
+    CrudFormComponent,
+    CrudTableComponent,
     //tarea 04  search-on-type
     SearchOnTypeComponent,
     //tarea 05 light-switch
