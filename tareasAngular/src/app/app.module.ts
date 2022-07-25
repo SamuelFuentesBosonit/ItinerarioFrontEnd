@@ -10,6 +10,8 @@ import { LazyRoutingModule } from './components/lazy-routing.module';
 import { PrimengModule } from './components/primeng.module';
 import { SharedModule } from './shared/shared.module';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -17,6 +19,8 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule,
     HttpClientModule,
+
+    BrowserAnimationsModule,
     
     AppRoutingModule,
     ComponentsModule,

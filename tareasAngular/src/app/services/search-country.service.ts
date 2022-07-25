@@ -7,14 +7,20 @@ import { Country } from '../interfaces/country.interface';
   providedIn: 'root'
 })
 export class SearchCountryService {
-
-  constructor(private http: HttpClient) { }
-  getCountry(): Observable<Country[]> {
-    return this.http.get<Country[]>('src/assets/test.json');
+  info: any={};
+  constructor ( private http: HttpClient ) {
+    console.log("ahí va!");
+    http.get('../../assets/test.json')
+    .subscribe( resp => {
+      this.info=resp;
+      console.log(this.info.country)
+    })
+    
   }
 /*
-  getCountry ( url: string ) {
-    return this.http.get(url);
+  constructor(private http: HttpClient) { }
+  getCountry(): Observable<Country[]> {
+    return this.http.get<Country[]>('https://api.jsonbin.io/v3/qs/62dea6d9248d43754f03aae8');
   }
   */
 }

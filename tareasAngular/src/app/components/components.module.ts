@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
 //components
 //tarea 01 
 import { DisplayHideComponent } from './display-hide/display-hide.component';
@@ -22,6 +23,7 @@ import { CounterComponent } from './counter/counter.component';
 
 //primeNG
 import { PrimengModule } from './primeng.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -46,7 +48,8 @@ import { PrimengModule } from './primeng.module';
   ],
   imports: [
     CommonModule,
-    PrimengModule
+    PrimengModule,
+    HttpClientModule
   ]
 })
 export class ComponentsModule { }

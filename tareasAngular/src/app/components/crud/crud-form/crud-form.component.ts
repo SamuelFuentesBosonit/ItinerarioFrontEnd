@@ -5,6 +5,7 @@ import { SearchCountryService } from 'src/app/services/search-country.service';
 import { SelectItemGroup } from 'primeng/api/selectitemgroup';
 import { SelectItem } from 'primeng/api/selectitem';
 import { Country } from '../../../interfaces/country.interface';
+import { InfoPaginaService } from '../../../services/info-pagina.service';
 
 
 
@@ -14,7 +15,11 @@ import { Country } from '../../../interfaces/country.interface';
   styleUrls: ['./crud-form.component.css']
 })
 export class CrudFormComponent implements OnInit {
+  constructor( public infoPagina: InfoPaginaService ) {  }
 
+ ngOnInit(): void { }
+
+  /*
   lista2 : string[] = ["hola","que","tal", "estas"];
 
   lista: any = this.json.getCountry;
@@ -23,7 +28,9 @@ export class CrudFormComponent implements OnInit {
   
   item: string = '';
 
-  country: Country[] =[
+  country!: Country[] 
+  */
+  /*=[
     {
         "iso2": "AF",
         "iso3": "AFG",
@@ -53,14 +60,15 @@ export class CrudFormComponent implements OnInit {
       ]     
     }
   ]
-
+*/
+/*
   constructor( public json: SearchCountryService ) {
    }
 
   ngOnInit(): void {
     this.json.getCountry()
     .subscribe( country => {
-      this.country = country;
+      country = this.country;
     })
 
   }
@@ -68,7 +76,7 @@ export class CrudFormComponent implements OnInit {
   public firstWay():void{
     console.log(data);   
   }
-
+*/
  /*
   ngOnInit(): void {
     this.json.getCountry('src/assets/countries.json').subscribe( ( res: any ) => {

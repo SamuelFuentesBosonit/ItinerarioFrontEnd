@@ -1,34 +1,17 @@
-{
-    "data": [
-        {
-            "iso2": "AA",
-            "iso3": "AAA",
-            "country": "Aaaaaaa",
-            "cities": [
-                "Herat",
-                "Kabul",
-                "Kandahar",
-                "Molah",
-                "Rana",
-                "Shar",
-                "Sharif",
-                "Wazir Akbar Khan"
-            ]
-        },
-        {
-            "iso2": "A2",
-            "iso3": "AA2",
-            "country": "Aaaaaa2",
-            "cities": [
-                "Herat2",
-                "Kabul2",
-                "Kandahar2",
-                "Molah2",
-                "Rana2",
-                "Shar2",
-                "Sharif2",
-                "Wazir Akbar Khan2"
-            ]
-        }
+[
+    {
+    "titulo":"test",
+    "nombre":"testN",
+    "test":"test"
+    },
+    {
+    "titulo":"test2",
+    "nombre":"testN2",
+    "test":"test2"
+    },
+    {
+    "titulo":"tes3t",
+    "nombre":"testN3",
+    "test":"test3"
+    }
     ]
-}

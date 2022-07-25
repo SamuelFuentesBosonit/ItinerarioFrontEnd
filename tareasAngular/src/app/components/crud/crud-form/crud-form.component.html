@@ -1,7 +1,10 @@
 
 <div class="b">
     <h1>Formulario de Registro</h1>
-    <button (click)="firstWay()">Con TypeScript e <i>import Statement</i></button>
+    <!-- 
+
+        <button (click)="firstWay()">Con TypeScript e <i>import Statement</i></button>
+    -->
     <!--Nombre de usuario-->
     <div class="l">
         <label>Nombre de usuario</label>
@@ -61,15 +64,50 @@
 </div>
 
 
+ <!--
     <select name="miselect">
         <option 
-            [value]="item" 
-            *ngFor="let country of country"
-            >{{country.country}}</option>
+        [value]="item" 
+        *ngFor="let country of country"
+        >{{country.country}}</option>
     </select>
+    {{infoPagina.info.data.country}}
+    {{infoPagina.info.country}}
+    {{test.infoPagina.data.country}}
+    {{infoPagina.info.titulo}}
+
+    <p-dropdown 
+    class="form-control"
+    formControlName="country"
+    [options]="infoPagina.info.country"
+    placeholder="Seleccione un país"></p-dropdown>
+    
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th> # </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let country of infoPagina.info.country">
+                <td>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>{{infoPagina.info|json}}
+
+    <select name="miselect">
+    <option 
+    [value]="titulo" 
+    *ngFor="let titulo of infoPagina.info"
+    >{{infoPagina.info.titulo}}</option>
+</select>
+--> 
 
 <p-dropdown 
     class="form-control"
-    formControlName="country"
-    [options]="country"
+    formControlName="titulo"
+    [options]="infoPagina.info"
+
     placeholder="Seleccione un país"></p-dropdown>
