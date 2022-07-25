@@ -1,6 +1,7 @@
 
 <div class="b">
     <h1>Formulario de Registro</h1>
+    <button (click)="firstWay()">Con TypeScript e <i>import Statement</i></button>
     <!--Nombre de usuario-->
     <div class="l">
         <label>Nombre de usuario</label>
@@ -58,3 +59,17 @@
     </div>
     <button pButton label="Crear" style="margin: 5px;"></button>   
 </div>
+
+
+    <select name="miselect">
+        <option 
+            [value]="item" 
+            *ngFor="let country of country"
+            >{{country.country}}</option>
+    </select>
+
+<p-dropdown 
+    class="form-control"
+    formControlName="country"
+    [options]="country"
+    placeholder="Seleccione un país"></p-dropdown>

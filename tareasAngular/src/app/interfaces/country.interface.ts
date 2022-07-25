@@ -1,8 +1,6 @@
 export interface Country {
-    name: string;
-    city: City;
-}
-
-export interface City {
-    name: string;
+    iso2: string,
+    iso3: string,
+    country: string,
+    cities: string[];
 }

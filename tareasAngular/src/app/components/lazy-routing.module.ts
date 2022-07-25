@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { JsonPipe } from '@angular/common';
+import { Component, NgModule } from '@angular/core';
 
 import { Routes, RouterModule } from '@angular/router';
 
@@ -10,6 +11,7 @@ import { DisplayHideComponent } from './display-hide/display-hide.component';
 import { ExternalLibraryWithDataComponent } from './external-library-with-data/external-library-with-data.component';
 import { LightSwitchComponent } from './light-switch/light-switch.component';
 import { SearchOnTypeComponent } from './search-on-type/search-on-type.component';
+import data from 'src/assets/countries.json'
 
 const routes: Routes = [
   {
@@ -41,6 +43,7 @@ const routes: Routes = [
     path: 'search-on-type',
     component: SearchOnTypeComponent
   },
+  //{path: '/src/assets/countries.json'},
   {
     path: '**',
     redirectTo: ''
