@@ -11,6 +11,7 @@ import { CommunicationParentChildComponent } from './communication-parent-child/
 import { CrudComponent } from './crud/crud.component';
 import { CrudTableComponent } from './crud/crud-table/crud-table.component';
 import { CrudFormComponent } from './crud/crud-form/crud-form.component';
+import { SelectCountriesComponent } from './crud/crud-form/select-countries/select-countries.component';
 //tarea 04  search-on-type
 import { SearchOnTypeComponent } from './search-on-type/search-on-type.component';
 //tarea 05 light-switch
@@ -23,6 +24,7 @@ import { CounterComponent } from './counter/counter.component';
 //primeNG
 import { PrimengModule } from './primeng.module';
 
+
 @NgModule({
   declarations: [
     //tarea 01 display-hide
@@ -34,6 +36,7 @@ import { PrimengModule } from './primeng.module';
     CrudComponent,
     CrudFormComponent,
     CrudTableComponent,
+    SelectCountriesComponent,
     //tarea 04  search-on-type
     SearchOnTypeComponent,
     //tarea 05 light-switch

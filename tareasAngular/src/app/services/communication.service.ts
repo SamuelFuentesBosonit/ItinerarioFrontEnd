@@ -1,3 +1,4 @@
+//tarea 02 communication-parent-child
 import { Injectable, EventEmitter } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
@@ -7,8 +8,6 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class CommunicationService {
-
-//tarea 02 communication-parent-child
 
   //observable
   private _Parent : BehaviorSubject<string> = new BehaviorSubject<string>( 'PARENT USING SUBJECT' );

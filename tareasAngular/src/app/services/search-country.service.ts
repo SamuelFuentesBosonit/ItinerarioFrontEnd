@@ -1,3 +1,4 @@
+//tarea 03 crud
 import { Injectable } from '@angular/core';
 
 import { HttpClient, HttpParams } from '@angular/common/http';
@@ -9,7 +10,7 @@ import { Country } from '../interfaces/country.interface';
 @Injectable({
   providedIn: 'root'
 })
-export class CountryService {
+export class SearchCountryService {
   private apiUrl: string = 'https://restcountries.com/v2/'
 
   get httpGetParams () {

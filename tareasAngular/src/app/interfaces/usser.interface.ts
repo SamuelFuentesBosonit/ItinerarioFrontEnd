@@ -1,5 +1,4 @@
-import { City } from "./city.interface";
-import { Country } from "./country.interface";
+import { Country, City } from "./country.interface";
 
 export interface Usser {
     name: string;
