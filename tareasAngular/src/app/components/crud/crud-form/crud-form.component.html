@@ -1,11 +1,7 @@
 
 <div class="b">
     <h1>Formulario de Registro</h1>
-    <!-- 
-
-        <button (click)="firstWay()">Con TypeScript e <i>import Statement</i></button>
-    -->
-    <!--Nombre de usuario-->
+     
     <div class="l">
         <label>Nombre de usuario</label>
         <input 
@@ -14,7 +10,7 @@
             formControlName="name">
     </div>
 
-    <!--Contraseña-->
+  
     <div class="l">
         <label>Contraseña</label>
         <input 
@@ -23,7 +19,7 @@
             formControlName="pass">
     </div>
 
-    <!--Confirma la Contraseña-->
+   
     <div class="l">
         <label>Confirma la Contraseña</label>
         <input 
@@ -32,7 +28,7 @@
             formControlName="passConfirm">
     </div>
 
-    <!--Correo-->
+
     <div class="l">
         <label>Correo</label>
         <input 
@@ -41,18 +37,22 @@
             formControlName="mail">
     </div>
 
-    <!--checkbox-->
+
     <div>
         
     </div>
-    <!--País-->
+
     <div class="l">
-        <label>País</label>
-        <input 
-            type="texts" 
-            class="form-control"
-            formControlName="country">
+        <select name="miselect">
+            <option 
+            [value]="country" 
+            *ngFor="let country of countries">
+            {{country.country}}
+        </option>
+        </select>
     </div>
+
+
     <div class="l">
         <label>Ciudad</label>
         <input 
@@ -62,52 +62,22 @@
     </div>
     <button pButton label="Crear" style="margin: 5px;"></button>   
 </div>
+<!-- 
 
-
- <!--
-    <select name="miselect">
-        <option 
-        [value]="item" 
-        *ngFor="let country of country"
-        >{{country.country}}</option>
-    </select>
-    {{infoPagina.info.data.country}}
-    {{infoPagina.info.country}}
-    {{test.infoPagina.data.country}}
-    {{infoPagina.info.titulo}}
-
-    <p-dropdown 
-    class="form-control"
-    formControlName="country"
-    [options]="infoPagina.info.country"
-    placeholder="Seleccione un país"></p-dropdown>
-    
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th> # </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let country of infoPagina.info.country">
-                <td>
-                    
-                </td>
-            </tr>
-        </tbody>
-    </table>{{infoPagina.info|json}}
-
-    <select name="miselect">
-    <option 
-    [value]="titulo" 
-    *ngFor="let titulo of infoPagina.info"
-    >{{infoPagina.info.titulo}}</option>
-</select>
---> 
-
-<p-dropdown 
-    class="form-control"
-    formControlName="titulo"
-    [options]="infoPagina.info"
-
-    placeholder="Seleccione un país"></p-dropdown>
+    <div class="l">
+        <label>País</label>
+        <select name="miselect">
+            <option 
+            [value]="country" 
+            *ngFor="let country of countries">
+            {{country.country}}
+        </option>
+            <div class="l">
+        <p-dropdown 
+            class="form-control"
+            formControlName="country"
+            [options]='countries'
+            optionLabel="let country of countries"
+            placeholder="Seleccione un país"></p-dropdown>
+    </div>
+    -->
