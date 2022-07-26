@@ -5,7 +5,9 @@ import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { DropdownModule } from 'primeng/dropdown';
+import { InputTextModule } from 'primeng/inputtext';
 import { MenubarModule } from 'primeng/menubar';
+
 
 
 @NgModule({
@@ -17,6 +19,7 @@ import { MenubarModule } from 'primeng/menubar';
     ButtonModule,
     CardModule,
     DropdownModule,
+    InputTextModule,
     MenubarModule
   ]
 })

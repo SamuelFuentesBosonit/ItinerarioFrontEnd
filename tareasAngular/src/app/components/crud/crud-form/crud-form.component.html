@@ -1,4 +1,98 @@
+<div class="row">
+    <div class="col">
+        <form 
+            class="formulario"
+            [formGroup]="crudForm"
+            autocomplete="off"
+            (ngSubmit)="onFormSubmit()">
 
+            <!-- Nombre -->
+            <div>
+                <label>Nombre de Usuario</label>
+                <div>
+                    <span class="p-input-icon-right">
+                        <i class="pi pi-spin pi-spinner"></i>
+                        <input 
+                            type="text"
+                            class="form-control"
+                            pInputText 
+                            [(ngModel)]="isValidFormSubmitted.name"
+                            placeholder="Nombre del usuario" >        
+                    </span> 
+s
+                    <input type="text"
+                            class="form-control"
+                            formControlName="name"
+                            value="{{isValidFormSubmitted?.name}}"
+                            placeholder="Nombre del usuario">
+                </div>
+                <span 
+                    class="from-text text-danger"
+                    *ngIf="launchError('name')">
+                        Campo obligatorio.
+                </span>
+            </div>
+
+            <!-- Mail -->
+            <div>
+                <label>Mail</label>
+                <div>
+                    <input type="email"
+                            class="form-control"
+                            formControlName="mail"
+                            value="{{isValidFormSubmitted?.mail}}"
+                            placeholder="Email del usuario">
+                </div>
+                <span 
+                    class="from-text text-danger"
+                    *ngIf="launchError('mail')">
+                        Escriba correctamente su correo electrónico.
+                </span>
+            </div>
+
+            <!-- Password -->
+            <div>
+                <label>Contraseña</label>
+                <div>
+                    <input type="password"
+                            class="form-control"
+                            formControlName="password"
+                            value="{{isValidFormSubmitted?.password}}"
+                            placeholder="Contraseña">
+
+                </div>
+                <span 
+                    class="from-text text-danger"
+                    *ngIf="launchError('password')">
+                        La contraseña debe ser de al menos 6 caracteres.
+                </span>
+            </div>
+
+            <!-- Confirmar Password -->
+            <div>
+                <label>Confirmar Contraseña</label>
+                <div>
+                    <input type="password"
+                            class="form-control"
+                            formControlName="password"
+                            value="{{isValidFormSubmitted?.passwordConfirm}}"
+                            placeholder="Confirmar Contraseña">
+
+                </div>
+                <span 
+                    class="from-text text-danger"
+                    *ngIf="launchError('password')">
+                        Las contraseñas deben de ser iguales.
+                </span>
+            </div>
+            
+        </form>
+    </div>
+</div>
+
+
+
+<!--
 <div class="b">
     <h1>Formulario de Registro</h1>
      
@@ -16,7 +110,7 @@
         <input 
             type="password" 
             class="form-control"
-            formControlName="pass">
+            formControlName="password">
     </div>
 
    
@@ -25,7 +119,7 @@
         <input 
             type="password" 
             class="form-control"
-            formControlName="passConfirm">
+            formControlName="passwordConfirm">
     </div>
 
 
@@ -62,7 +156,7 @@
     </div>
     <button pButton label="Crear" style="margin: 5px;"></button>   
 </div>
-<!-- 
+ 
 
     <div class="l">
         <label>País</label>

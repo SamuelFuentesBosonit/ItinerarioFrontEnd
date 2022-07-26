@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //components
 //tarea 01 
@@ -23,7 +25,6 @@ import { CounterComponent } from './counter/counter.component';
 
 //primeNG
 import { PrimengModule } from './primeng.module';
-import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -48,8 +49,10 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     PrimengModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ]
 })
 export class ComponentsModule { }
