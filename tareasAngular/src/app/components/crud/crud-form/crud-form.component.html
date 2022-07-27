@@ -10,13 +10,16 @@
                 <label>Nombre de Usuario</label>
                 <div>
                     <span class="p-input-icon-right">
-                        <i class="pi pi-spin pi-spinner"></i>
+                        <i *ngIf="launchError('name')" class="pi pi-ban" style="color:brown"></i>
+                        <i *ngIf="!launchError('name') && !unTouchedInput('name')" class="pi pi-check" style="color:green"></i>
+                        <i *ngIf="unTouchedInput('name')" class="pi pi-spin pi-spinner" style="color:blue"></i>
                         <input 
                             type="text"
                             formControlName="name"
                             class="form-control"
                             pInputText 
-                            placeholder="Nombre del usuario">        
+                            placeholder="Nombre del usuario"
+                            id="idName">        
                     </span> 
                 </div>
                 <span *ngIf="launchError('name')">
@@ -29,7 +32,9 @@
                 <label>Mail</label>
                 <div>
                     <span class="p-input-icon-right">
-                        <i class="pi pi-spin pi-spinner"></i>
+                        <i *ngIf="launchError('mail')" class="pi pi-ban" style="color:brown"></i>
+                        <i *ngIf="!launchError('mail') && !unTouchedInput('mail')" class="pi pi-check" style="color:green"></i>
+                        <i *ngIf="unTouchedInput('mail')" class="pi pi-spin pi-spinner" style="color:blue"></i>
                         <input 
                             type="email"
                             formControlName="mail"
@@ -48,7 +53,9 @@
                 <label>Contraseña</label>
                 <div>
                     <span class="p-input-icon-right">
-                        <i class="pi pi-spin pi-spinner"></i>
+                        <i *ngIf="launchError('password')" class="pi pi-ban" style="color:brown"></i>
+                        <i *ngIf="!launchError('password') && !unTouchedInput('password')" class="pi pi-check" style="color:green"></i>
+                        <i *ngIf="unTouchedInput('password')" class="pi pi-spin pi-spinner" style="color:blue"></i>
                         <input 
                             type="password"
                             formControlName="password"
@@ -67,7 +74,8 @@
                 <label>Confirmar Contraseña</label>
                 <div>
                     <span class="p-input-icon-right">
-                        <i class="pi pi-spin pi-spinner"></i>
+                        <i *ngIf="!passConfirm('password', 'passwordConfirm')" class="pi pi-ban" style="color:brown"></i>
+                        <i *ngIf="passConfirm('password', 'passwordConfirm')" class="pi pi-check" style="color:green"></i>
                         <input 
                             type="password"
                             formControlName="passwordConfirm"
@@ -76,7 +84,7 @@
                             placeholder="Confirmar Contraseña">        
                     </span> 
                 </div>
-                <span *ngIf="launchError('passwordConfirm')">
+                <span *ngIf="passConfirm('password', 'passwordConfirm')">
                         Las contraseñas deben de ser iguales.
                 </span>
             </div>
@@ -86,11 +94,8 @@
                     <p-checkbox 
                         formControlName="checkBoxPromotion"
                         value="true"></p-checkbox>
-                    <label> Enviame ofertas promocionales</label>
+                    <label> Envíame ofertas promocionales</label>
                 </div>
-                <span *ngIf="launchError('checkBoxPromotion')">
-                        Las contraseñas deben de ser iguales.
-                </span>
             </div>
             <!-- Paises -->
             <div>
@@ -102,7 +107,9 @@
                         [options]='countries'
                         optionLabel="country"
                         placeholder="Seleccione un país"
-                        >                       >
+                        [filter]="true" 
+                        filterBy="country" 
+                        [showClear]="true"> 
                     </p-dropdown>
                 </div>
                 <span *ngIf="launchError('country')">
@@ -124,7 +131,8 @@
                         Seleccione una ciudad.
                 </span>
             </div>
-            
+            <p-button 
+                label="Crear" ></p-button>
         </form>
     </div>
 
