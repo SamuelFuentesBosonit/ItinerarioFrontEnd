@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { tap } from 'rxjs/operators';
+import { switchMap, tap } from 'rxjs/operators';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 
 import { Country } from '../../../interfaces/country.interface';
@@ -19,7 +19,7 @@ import { CountriesService } from '../../../services/countries.service';
 })
 export class CrudFormComponent implements OnInit {
 
-  namePattern = "^[a-z0-9_-]{8,15}$";
+  namePattern = "([a-zA-Z]+)( ([a-zA-Z]+))? ([a-zA-Z]+)( ([a-zA-Z]+))?";
   passPattern = "^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,12}$";
   mailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
 
@@ -28,16 +28,32 @@ export class CrudFormComponent implements OnInit {
 
   countries!: Country[];
 
-  constructor(  private countrySvc: CountriesService,
-                private formBuilder: FormBuilder ) {}
+  country: Country = {
+    iso2: '',
+    iso3: '',
+    country: '',
+    cities: [
+
+    ]
+  };
+
+  cities!: string[];
+
+  constructor(  private formBuilder: FormBuilder,
+                private countrySvc: CountriesService) {}
 
   ngOnInit(): void { 
     this.countrySvc.getCountries()
     .pipe(
-      tap( ( countryList: Country[] ) => this.countries = countryList )
-    )
-    .subscribe();
-  }
+      tap( ( countryList: Country[] ) => {this.countries = countryList
+      console.log(this.countries)} )
+      ).subscribe();
+
+      this.crudForm.get("formCountry")?.valueChanges
+        .subscribe( city =>{ this.cities = city.cities
+          
+        console.log( city.cities )});
+    }
 
   crudForm: FormGroup = this.formBuilder.group({
     name: [ '', [ Validators.required, Validators.pattern ( this.namePattern ) ] ],
@@ -45,8 +61,8 @@ export class CrudFormComponent implements OnInit {
     passwordConfirm: [ '', [ Validators.required ] ],
     mail: [ '', [ Validators.required, Validators.pattern ( this.mailPattern ) ] ],
     checkBoxPromotion: [ '' ],
-    country: [ '', Validators.required ],
-    city: [ '',  Validators.required ]
+    formCountry: [ '', Validators.required ],
+    formCity: [ '',  Validators.required ]
   }, {
     passValidator: [this.passConfirm ( 'password', 'passwordConfirm' ) ]
   });

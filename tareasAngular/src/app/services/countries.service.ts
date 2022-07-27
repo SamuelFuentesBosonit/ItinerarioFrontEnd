@@ -7,10 +7,15 @@ import { Country } from '../interfaces/country.interface';
   providedIn: 'root'
 })
 export class CountriesService {
+
   private apiURL ='http://localhost:3000/countries';
+
   constructor(private http: HttpClient) { }
 
-  getCountries(): Observable<Country[]>{
-    return this.http.get<Country[]>(this.apiURL)
+  getCountries() : Observable<Country[]> {
+    return this.http.get<Country[]>( this.apiURL )
+  }
+  getCities() : Observable<string[]> {
+    return this.http.get<string[]>( this.apiURL )
   }
 }

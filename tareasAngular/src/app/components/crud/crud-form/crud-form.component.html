@@ -1,5 +1,4 @@
-<div class="row">
-    <div class="col">
+    <div class="col b">
         <form 
             class="formulario"
             [formGroup]="crudForm"
@@ -14,22 +13,14 @@
                         <i class="pi pi-spin pi-spinner"></i>
                         <input 
                             type="text"
+                            formControlName="name"
                             class="form-control"
                             pInputText 
-                            [(ngModel)]="isValidFormSubmitted.name"
-                            placeholder="Nombre del usuario" >        
+                            placeholder="Nombre del usuario">        
                     </span> 
-s
-                    <input type="text"
-                            class="form-control"
-                            formControlName="name"
-                            value="{{isValidFormSubmitted?.name}}"
-                            placeholder="Nombre del usuario">
                 </div>
-                <span 
-                    class="from-text text-danger"
-                    *ngIf="launchError('name')">
-                        Campo obligatorio.
+                <span *ngIf="launchError('name')">
+                    Introduzca nombre y apellido.
                 </span>
             </div>
 
@@ -37,15 +28,17 @@ s
             <div>
                 <label>Mail</label>
                 <div>
-                    <input type="email"
-                            class="form-control"
+                    <span class="p-input-icon-right">
+                        <i class="pi pi-spin pi-spinner"></i>
+                        <input 
+                            type="email"
                             formControlName="mail"
-                            value="{{isValidFormSubmitted?.mail}}"
-                            placeholder="Email del usuario">
+                            class="form-control"
+                            pInputText 
+                            placeholder="Email del usuario">        
+                    </span> 
                 </div>
-                <span 
-                    class="from-text text-danger"
-                    *ngIf="launchError('mail')">
+                <span *ngIf="launchError('mail')">
                         Escriba correctamente su correo electrónico.
                 </span>
             </div>
@@ -54,16 +47,17 @@ s
             <div>
                 <label>Contraseña</label>
                 <div>
-                    <input type="password"
-                            class="form-control"
+                    <span class="p-input-icon-right">
+                        <i class="pi pi-spin pi-spinner"></i>
+                        <input 
+                            type="password"
                             formControlName="password"
-                            value="{{isValidFormSubmitted?.password}}"
-                            placeholder="Contraseña">
-
+                            class="form-control"
+                            pInputText 
+                            placeholder="Contraseña">        
+                    </span> 
                 </div>
-                <span 
-                    class="from-text text-danger"
-                    *ngIf="launchError('password')">
+                <span *ngIf="launchError('password')">
                         La contraseña debe ser de al menos 6 caracteres.
                 </span>
             </div>
@@ -72,106 +66,65 @@ s
             <div>
                 <label>Confirmar Contraseña</label>
                 <div>
-                    <input type="password"
+                    <span class="p-input-icon-right">
+                        <i class="pi pi-spin pi-spinner"></i>
+                        <input 
+                            type="password"
+                            formControlName="passwordConfirm"
                             class="form-control"
-                            formControlName="password"
-                            value="{{isValidFormSubmitted?.passwordConfirm}}"
-                            placeholder="Confirmar Contraseña">
-
+                            pInputText 
+                            placeholder="Confirmar Contraseña">        
+                    </span> 
                 </div>
-                <span 
-                    class="from-text text-danger"
-                    *ngIf="launchError('password')">
+                <span *ngIf="launchError('passwordConfirm')">
                         Las contraseñas deben de ser iguales.
+                </span>
+            </div>
+            <!-- CheckBox -->
+            <div>
+                <div>
+                    <p-checkbox 
+                        formControlName="checkBoxPromotion"
+                        value="true"></p-checkbox>
+                    <label> Enviame ofertas promocionales</label>
+                </div>
+                <span *ngIf="launchError('checkBoxPromotion')">
+                        Las contraseñas deben de ser iguales.
+                </span>
+            </div>
+            <!-- Paises -->
+            <div>
+                <label>País</label>
+                <div>
+                    <p-dropdown 
+                        class="form-control"
+                        formControlName="formCountry"
+                        [options]='countries'
+                        optionLabel="country"
+                        placeholder="Seleccione un país"
+                        >                       >
+                    </p-dropdown>
+                </div>
+                <span *ngIf="launchError('country')">
+                        Seleccione un país.
+                </span>
+            </div>
+            <!--Ciudad-->
+            <div>
+                <label>Ciudad</label>
+                <div>
+                    <p-dropdown 
+                        class="form-control"
+                        formControlName="formCity"
+                        [options]='cities'
+                        placeholder="Seleccione una ciudad">
+                    </p-dropdown>
+                </div>
+                <span *ngIf="launchError('city')">
+                        Seleccione una ciudad.
                 </span>
             </div>
             
         </form>
     </div>
-</div>
 
-
-
-<!--
-<div class="b">
-    <h1>Formulario de Registro</h1>
-     
-    <div class="l">
-        <label>Nombre de usuario</label>
-        <input 
-            type="text" 
-            class="form-control"
-            formControlName="name">
-    </div>
-
-  
-    <div class="l">
-        <label>Contraseña</label>
-        <input 
-            type="password" 
-            class="form-control"
-            formControlName="password">
-    </div>
-
-   
-    <div class="l">
-        <label>Confirma la Contraseña</label>
-        <input 
-            type="password" 
-            class="form-control"
-            formControlName="passwordConfirm">
-    </div>
-
-
-    <div class="l">
-        <label>Correo</label>
-        <input 
-            type="email" 
-            class="form-control"
-            formControlName="mail">
-    </div>
-
-
-    <div>
-        
-    </div>
-
-    <div class="l">
-        <select name="miselect">
-            <option 
-            [value]="country" 
-            *ngFor="let country of countries">
-            {{country.country}}
-        </option>
-        </select>
-    </div>
-
-
-    <div class="l">
-        <label>Ciudad</label>
-        <input 
-            type="text" 
-            class="form-control"
-            formControlName="city">
-    </div>
-    <button pButton label="Crear" style="margin: 5px;"></button>   
-</div>
- 
-
-    <div class="l">
-        <label>País</label>
-        <select name="miselect">
-            <option 
-            [value]="country" 
-            *ngFor="let country of countries">
-            {{country.country}}
-        </option>
-            <div class="l">
-        <p-dropdown 
-            class="form-control"
-            formControlName="country"
-            [options]='countries'
-            optionLabel="let country of countries"
-            placeholder="Seleccione un país"></p-dropdown>
-    </div>
-    -->
