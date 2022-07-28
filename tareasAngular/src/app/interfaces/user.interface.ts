@@ -3,8 +3,9 @@ import { Country } from "./country.interface";
 export interface User {
     name: string;
     pass: string;
-    promotion: Boolean
-    email: string;
-    country: Country;
+    promotion: boolean;
+    mail: string;
+    country: string;
     city: string;
+    id: string;
 }

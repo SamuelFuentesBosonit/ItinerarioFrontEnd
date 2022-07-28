@@ -93,7 +93,7 @@
                 <div>
                     <p-checkbox 
                         formControlName="checkBoxPromotion"
-                        value="true"></p-checkbox>
+                        [binary]="true"></p-checkbox>
                     <label> Envíame ofertas promocionales</label>
                 </div>
             </div>
@@ -132,7 +132,8 @@
                 </span>
             </div>
             <p-button 
-                label="Crear" ></p-button>
+                label="Crear"
+                (click)="onFormSubmit()"></p-button>
         </form>
     </div>
 

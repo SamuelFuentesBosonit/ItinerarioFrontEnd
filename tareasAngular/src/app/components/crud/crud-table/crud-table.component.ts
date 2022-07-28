@@ -1,6 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
-//interfaces
+import { Component, OnInit } from '@angular/core';
 
+//interfaces
+import { User } from 'src/app/interfaces/user.interface';
+//service
+import { CountriesService } from '../../../services/countries.service';
 
 @Component({
   selector: 'app-crud-table',
@@ -11,9 +14,36 @@ export class CrudTableComponent implements OnInit {
 
   //@Input() ussers: Usser[] = []
 
-  constructor() { }
+  id : string = '';
 
-  ngOnInit(): void {
+  user : User = {
+    name: '',
+    pass: '',
+    promotion: true,
+    mail: '',
+    country: '',
+    city: '',
+    id: ''
+  }
+  
+  users! : User[];
+
+  selectedUser! : User[];
+
+  editing: boolean = false;
+
+  constructor( private userSvc: CountriesService ) { }
+
+  ngOnInit ( ): void {
+    //lista de usuarios cargados desde el JSON
+    this.userSvc.getUsers()
+      .subscribe( ( usersList: User[] ) => {
+        this.users = usersList});
+  }
+
+  deleteUser ( user: User ) {
+    this.userSvc.delUser( user )
+      .subscribe()
   }
 
 }

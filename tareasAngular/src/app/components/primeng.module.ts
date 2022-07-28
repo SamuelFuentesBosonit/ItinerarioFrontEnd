@@ -8,6 +8,7 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { MenubarModule } from 'primeng/menubar';
+import { TableModule } from 'primeng/table';
 
 
 
@@ -22,7 +23,8 @@ import { MenubarModule } from 'primeng/menubar';
     CheckboxModule,
     DropdownModule,
     InputTextModule,
-    MenubarModule
+    MenubarModule,
+    TableModule
   ]
 })
 export class PrimengModule { }

@@ -1,3 +1,7 @@
 .f {
-    display: flex;
+    display: flex;    
 }
+.l{
+    display: grid;
+}
+

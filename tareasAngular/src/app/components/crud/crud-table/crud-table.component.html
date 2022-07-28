@@ -1,23 +1,35 @@
-<table class="table table-hover">
-    <thead>
+<div class="b">
+    <p-table columnResizeMode="fit" [value]="users" responsiveLayout="scroll">
+        <ng-template pTemplate="header">
         <tr>
-            <th> Nombre de usuario </th>
-            <th> Correo </th>
-            <th> Suscrito </th>
-            <th> País </th>
-            <th> Ciudad </th>
-            <th> Actions </th>
+            <th>Nombre de Usuario</th>
+            <th>Correo</th>
+            <th>Suscrito</th>
+            <th>País</th>
+            <th>Ciudad</th>
+            <th>Actions</th>
         </tr>
-    </thead>
- <!-- 
-
-     <tbody>
-         <tr *ngFor="let country of countries; let i = index"
-         class="animate__animated animate__fadeIn animate__faster">
-         <td> {{ i + 1 }} </td>
-         <td> {{ data.name }} </td>
+    </ng-template>
+    <ng-template pTemplate="body" let-user>
+        <tr>
+            <td>{{user.name}}</td>
+            <td>{{user.mail}}</td>
+            <td>{{user.promotion}}</td>
+            <td>{{user.country}}</td>
+            <td>{{user.city}}</td>
+            <td><button 
+                    pButton 
+                    pRipple 
+                    type="button" 
+                    icon="pi pi-pencil"></button>
+                <button 
+                    pButton 
+                    pRipple 
+                    type="button" 
+                    icon="pi pi-ban"
+                    class="p-button-rounded"
+                    (click)="deleteUser( user )"></button></td>
         </tr>
-    </tbody>
-    
--->
-</table>
+    </ng-template>
+</p-table>
+</div>

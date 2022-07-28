@@ -1,0 +1,23 @@
+{
+"users": [
+        {
+            "name": "Samuel F",
+            "pass": "123456",
+            "promotion": "true",
+			"mail": "samuel.fuentes@bosonit.com",
+			"country": "Spain",
+			"city" : "Seville",
+			"id": "001"	
+		},
+        {
+            "name": "test test",
+            "pass": "111111",
+            "promotion": "false",
+			"mail": "test@test.com",
+			"country": "Spain",
+			"city" : "Seville",
+			"id": "002"	
+		}
+		]
+  
+}
