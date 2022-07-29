@@ -77744,13 +77744,22 @@
   ],
   "users": [
     {
-      "name": "tdsdst test",
-      "pass": "111111",
-      "promotion": "false",
-      "mail": "test@test.com",
+      "name": "Samuel f",
+      "pass": "112233",
+      "promotion": true,
+      "mail": "sam@bosonit.com",
       "country": "Spain",
       "city": "Seville",
-      "id": "004"
+      "id": "_4s65sqhun"
+    },
+    {
+      "name": "sam fue",
+      "pass": "112233",
+      "promotion": true,
+      "mail": "sam@fue.com",
+      "country": "Afghanistan",
+      "city": "Kabul",
+      "id": "_2mnbxnpls"
     }
   ]
 }

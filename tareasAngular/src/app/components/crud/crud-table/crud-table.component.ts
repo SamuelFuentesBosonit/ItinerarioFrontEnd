@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 //interfaces
 import { User } from 'src/app/interfaces/user.interface';
 //service
-import { CountriesService } from '../../../services/countries.service';
+import { CrudService } from '../../../services/crud.service';
 
 @Component({
   selector: 'app-crud-table',
@@ -32,7 +32,7 @@ export class CrudTableComponent implements OnInit {
 
   editing: boolean = false;
 
-  constructor( private userSvc: CountriesService ) { }
+  constructor( private userSvc: CrudService ) { }
 
   ngOnInit ( ): void {
     //lista de usuarios cargados desde el JSON

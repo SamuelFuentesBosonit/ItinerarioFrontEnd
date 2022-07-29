@@ -12,7 +12,6 @@
                     <span class="p-input-icon-right">
                         <i *ngIf="launchError('name')" class="pi pi-ban" style="color:brown"></i>
                         <i *ngIf="!launchError('name') && !unTouchedInput('name')" class="pi pi-check" style="color:green"></i>
-                        <i *ngIf="unTouchedInput('name')" class="pi pi-spin pi-spinner" style="color:blue"></i>
                         <input 
                             type="text"
                             formControlName="name"
@@ -34,7 +33,6 @@
                     <span class="p-input-icon-right">
                         <i *ngIf="launchError('mail')" class="pi pi-ban" style="color:brown"></i>
                         <i *ngIf="!launchError('mail') && !unTouchedInput('mail')" class="pi pi-check" style="color:green"></i>
-                        <i *ngIf="unTouchedInput('mail')" class="pi pi-spin pi-spinner" style="color:blue"></i>
                         <input 
                             type="email"
                             formControlName="mail"
@@ -55,7 +53,6 @@
                     <span class="p-input-icon-right">
                         <i *ngIf="launchError('password')" class="pi pi-ban" style="color:brown"></i>
                         <i *ngIf="!launchError('password') && !unTouchedInput('password')" class="pi pi-check" style="color:green"></i>
-                        <i *ngIf="unTouchedInput('password')" class="pi pi-spin pi-spinner" style="color:blue"></i>
                         <input 
                             type="password"
                             formControlName="password"
@@ -74,8 +71,8 @@
                 <label>Confirmar Contraseña</label>
                 <div>
                     <span class="p-input-icon-right">
-                        <i *ngIf="!passConfirm('password', 'passwordConfirm')" class="pi pi-ban" style="color:brown"></i>
-                        <i *ngIf="passConfirm('password', 'passwordConfirm')" class="pi pi-check" style="color:green"></i>
+                        <i *ngIf="" class="pi pi-ban" style="color:brown"></i>
+                        <i *ngIf="" class="pi pi-check" style="color:green"></i>
                         <input 
                             type="password"
                             formControlName="passwordConfirm"
@@ -84,7 +81,7 @@
                             placeholder="Confirmar Contraseña">        
                     </span> 
                 </div>
-                <span *ngIf="passConfirm('password', 'passwordConfirm')">
+                <span *ngIf="!passConfirmation()">
                         Las contraseñas deben de ser iguales.
                 </span>
             </div>
@@ -132,6 +129,7 @@
                 </span>
             </div>
             <p-button 
+                *ngIf="reCheckAll('name','mail','password','passwordConfirm')"
                 label="Crear"
                 (click)="onFormSubmit()"></p-button>
         </form>

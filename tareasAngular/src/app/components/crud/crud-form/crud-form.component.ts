@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 
 import { tap } from 'rxjs/operators';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
-
+//interfaces
 import { Country } from '../../../interfaces/country.interface';
 import { User } from '../../../interfaces/user.interface';
-
-import { CountriesService } from '../../../services/countries.service';
+//servicios
+import { CrudService } from '../../../services/crud.service';
 
 @Component({
   selector: 'app-crud-form',
@@ -38,7 +38,7 @@ export class CrudFormComponent implements OnInit {
   cities!: string[];
 
   constructor(  private formBuilder: FormBuilder,
-                private countrySvc: CountriesService) {}
+                private countrySvc: CrudService) {}
 
   ngOnInit ( ): void { 
     //cargar lista de paises(countries)
@@ -59,7 +59,7 @@ export class CrudFormComponent implements OnInit {
   crudForm: FormGroup = this.formBuilder.group({
     name: [ '', [ Validators.required, Validators.pattern ( this.namePattern ) ] ],
     password: [ '', [ Validators.required, Validators.minLength(6) ] ],
-    passwordConfirm: [ '', [ Validators.required ] ],
+    passwordConfirm: [ '', [ Validators.required, Validators.minLength(6) ] ],
     mail: [ '', [ Validators.required, Validators.pattern ( this.mailPattern ) ] ],
     checkBoxPromotion: [ '', Validators.required ],
     formCountry: [ '', Validators.required ],
@@ -74,20 +74,30 @@ export class CrudFormComponent implements OnInit {
     && this.crudForm.get( value )?.touched;
   }
 
+  //doble comprobación de valores
+  reCheckAll (  name: string, mail: string, pass: string, cPass: string ) {
+    return this.crudForm.get( name )?.valid     && this.crudForm.get( name )?.touched,
+           this.crudForm.get( mail )?.valid    && this.crudForm.get( mail )?.touched,
+            this.crudForm.get( pass )?.valid    && this.crudForm.get( pass )?.touched,
+            this.crudForm.get( cPass )?.valid   && this.crudForm.get( cPass )?.touched,
+            this.crudForm.get( "formCountry" )?.valid && this.crudForm.get( "formCountry" )?.touched,
+            this.crudForm.get( "formCity" )?.valid    && this.crudForm.get( "formCity" )?.touched
+  }
+
   //comprobar si no se ha tocado algún input
   unTouchedInput ( value: string ) {
     return this.crudForm.get( value )?.untouched;
   }
 
-  //passConfirm por arreglar, no funciona
-  testPass (p1:string, p2:string) {
-    const pa1 = this.crudForm.get( p1 )?.value;
-    this.crudForm.get( p1 )?.touched;
-    const pa2 = this.crudForm.get( p2 )?.value;
-    this.crudForm.get( p1 )?.touched;
-    (pa1 == pa2)
-    ?true 
-    :false;
+  //passConfirmation
+  passConfirmation ( ): boolean {
+    let b : boolean = false;
+    const pa1 = this.crudForm.get( "password" )?.value;
+    const pa2 = this.crudForm.get( "passwordConfirm" )?.value;
+    ( pa1 === pa2 )
+    ? b = true
+    : b = false;
+    return b;
   }
   
   passConfirm (p1: string, p2: string) {
