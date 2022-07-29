@@ -71,8 +71,8 @@
                 <label>Confirmar Contraseña</label>
                 <div>
                     <span class="p-input-icon-right">
-                        <i *ngIf="" class="pi pi-ban" style="color:brown"></i>
-                        <i *ngIf="" class="pi pi-check" style="color:green"></i>
+                        <i *ngIf="!passConfirmation()" class="pi pi-ban" style="color:brown"></i>
+                        <i *ngIf="passConfirmation() && !unTouchedInput('password')" class="pi pi-check" style="color:green"></i>
                         <input 
                             type="password"
                             formControlName="passwordConfirm"
@@ -90,7 +90,8 @@
                 <div>
                     <p-checkbox 
                         formControlName="checkBoxPromotion"
-                        [binary]="true"></p-checkbox>
+                        [binary]="true"
+                        falseValue></p-checkbox>
                     <label> Envíame ofertas promocionales</label>
                 </div>
             </div>
@@ -129,9 +130,16 @@
                 </span>
             </div>
             <p-button 
-                *ngIf="reCheckAll('name','mail','password','passwordConfirm')"
+                *ngIf="!editing && reCheckAll('name','mail','password','passwordConfirm')"
                 label="Crear"
                 (click)="onFormSubmit()"></p-button>
+            <p-button 
+                *ngIf="editing && !reCheckAll('name','mail','password','passwordConfirm')"
+                label="Guardar"
+                (click)="edit()"></p-button>
         </form>
     </div>
+
+    <app-crud-table [message]="editing"             
+                    (messageToForm)="message($event)"></app-crud-table>
 

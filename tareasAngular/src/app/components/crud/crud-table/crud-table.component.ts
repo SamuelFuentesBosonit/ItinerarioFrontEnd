@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 //interfaces
 import { User } from 'src/app/interfaces/user.interface';
@@ -13,6 +13,10 @@ import { CrudService } from '../../../services/crud.service';
 export class CrudTableComponent implements OnInit {
 
   //@Input() ussers: Usser[] = []
+  @Input() message: boolean = true;
+  @Output() messageToForm = new EventEmitter<boolean>();
+
+  editing: boolean = true;
 
   id : string = '';
 
@@ -28,10 +32,6 @@ export class CrudTableComponent implements OnInit {
   
   users! : User[];
 
-  selectedUser! : User[];
-
-  editing: boolean = false;
-
   constructor( private userSvc: CrudService ) { }
 
   ngOnInit ( ): void {
@@ -39,11 +39,33 @@ export class CrudTableComponent implements OnInit {
     this.userSvc.getUsers()
       .subscribe( ( usersList: User[] ) => {
         this.users = usersList});
-  }
 
+    this.userSvc.refresh$
+      .subscribe( ( ) => {
+        this.userSvc.getUsers()
+          .subscribe( users => {
+            this.users = users
+          })
+
+    })
+  }
+  //borrar usuario
   deleteUser ( user: User ) {
     this.userSvc.delUser( user )
       .subscribe()
   }
+
+  //editar usuario
+  editUser ( user: User ) {
+
+  }
+  toForm ( ) {
+    console.log("hey")
+    this.userSvc.sendFromTableToForm()
+      .subscribe( message => {
+        this.messageToForm.emit(this.editing);
+        console.log(this.editing)
+      })
+  }  
 
 }

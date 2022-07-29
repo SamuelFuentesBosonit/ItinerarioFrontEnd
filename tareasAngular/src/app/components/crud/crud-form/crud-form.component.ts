@@ -37,6 +37,8 @@ export class CrudFormComponent implements OnInit {
   //array de cities(string) que se usá para almacenar el array de cities del JSON
   cities!: string[];
 
+  editing: boolean = false;
+
   constructor(  private formBuilder: FormBuilder,
                 private countrySvc: CrudService) {}
 
@@ -76,10 +78,10 @@ export class CrudFormComponent implements OnInit {
 
   //doble comprobación de valores
   reCheckAll (  name: string, mail: string, pass: string, cPass: string ) {
-    return this.crudForm.get( name )?.valid     && this.crudForm.get( name )?.touched,
-           this.crudForm.get( mail )?.valid    && this.crudForm.get( mail )?.touched,
-            this.crudForm.get( pass )?.valid    && this.crudForm.get( pass )?.touched,
-            this.crudForm.get( cPass )?.valid   && this.crudForm.get( cPass )?.touched,
+    return  this.crudForm.get( name )?.valid          && this.crudForm.get( name )?.touched,
+            this.crudForm.get( mail )?.valid          && this.crudForm.get( mail )?.touched,
+            this.crudForm.get( pass )?.valid          && this.crudForm.get( pass )?.touched,
+            this.crudForm.get( cPass )?.valid         && this.crudForm.get( cPass )?.touched,
             this.crudForm.get( "formCountry" )?.valid && this.crudForm.get( "formCountry" )?.touched,
             this.crudForm.get( "formCity" )?.valid    && this.crudForm.get( "formCity" )?.touched
   }
@@ -121,6 +123,7 @@ export class CrudFormComponent implements OnInit {
   }
   // on Submit
   onFormSubmit ( ) {
+    this.crudForm.markAllAsTouched();
     const user: User = {
       name : this.crudForm.get("name")?.value,
       pass: this.crudForm.get("password")?.value,
@@ -133,6 +136,16 @@ export class CrudFormComponent implements OnInit {
     this.countrySvc.insertUser( user )
       .subscribe();
   } 
+
+  message ( message: boolean ) {
+    this.editing = message;
+  }
+
+  edit () {
+
+
+    this.editing = false;
+  }
 
   //boton para pruebas
   testButtons(){

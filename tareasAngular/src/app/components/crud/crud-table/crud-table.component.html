@@ -14,14 +14,17 @@
         <tr>
             <td>{{user.name}}</td>
             <td>{{user.mail}}</td>
-            <td>{{user.promotion}}</td>
+            <td>
+                <i  class="pi"
+                    [ngClass]="{'true-icon pi-check':  user.promotion == true, 'false-icon pi-ban':  user.promotion == false}"></i>
             <td>{{user.country}}</td>
             <td>{{user.city}}</td>
             <td><button 
                     pButton 
                     pRipple 
                     type="button" 
-                    icon="pi pi-pencil"></button>
+                    icon="pi pi-pencil"
+                    (click)="toForm()"></button>
                 <button 
                     pButton 
                     pRipple 
