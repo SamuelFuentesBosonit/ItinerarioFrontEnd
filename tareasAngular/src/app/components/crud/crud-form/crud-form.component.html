@@ -129,14 +129,16 @@
                         Seleccione una ciudad.
                 </span>
             </div>
-            <p-button 
+            <button
+                pButton 
                 *ngIf="!editing && reCheckAll('name','mail','password','passwordConfirm')"
                 label="Crear"
-                (click)="onFormSubmit()"></p-button>
-            <p-button 
+                (click)="onFormSubmit()"></button>
+            <button 
+                pButton
                 *ngIf="editing && !reCheckAll('name','mail','password','passwordConfirm')"
                 label="Guardar"
-                (click)="edit()"></p-button>
+                (click)="edit()"></button>
         </form>
     </div>
 
