@@ -21,7 +21,7 @@ const routes: Routes = [
         component: AgregarComponent
       },
       {
-        path: 'editar/id',
+        path: 'editar/:id',
         component: AgregarComponent
       },
       // {
@@ -33,7 +33,7 @@ const routes: Routes = [
         component: BuscarComponent
       },
       {
-        path: 'id',
+        path: ':id',
         component: HeroeComponent
       },
       {
